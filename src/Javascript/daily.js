@@ -18,13 +18,57 @@ makeEmailArr: (names) => {
     return firstName+"."+lastName+atEvolveU;
 },
 
-makeEmailObj: (objName) => {
+makeEmailObj: (objNames) => {
     let objectNames = objNames;
-    const firstObjName = objectNames[0].toLowerCase();
-    const lastObjName = objectNames[1].toLowerCase();
+    const firstObjName = objectNames["fname"].toLowerCase();
+    const lastObjName = objectNames["lname"].toLowerCase();
     let atEvolveU = "@evolveu.ca"
-    return firstObj+"."+lastObj+atEvolveU;
+    return firstObjName+"."+lastObjName+atEvolveU;
 },
+
+// Let’s dig deeper into arrays. Read the documentation on the following and create examples of each one:
+
+toDoGroceries: (arrayToDo) => {
+    for(let itemList = 0; itemList < arrayToDo.length; itemList++) {
+        arrayToDo[itemList]= arrayToDo[itemList] + "!";
+    
+    }; return arrayToDo;
+},
+
+countDown: (numberCountDown) => {
+    
+    while(numberCountDown > 0) {
+        console.log(numberCountDown);
+        numberCountDown--;
+    }; return numberCountDown;
+},
+
+doWhileFunction: (counterTwo) => {
+    do {
+        console.log(counterTwo);
+        counterTwo.push("hi");
+  
+},
+
+// Basics
+// for
+// while
+// do while
+
+// Next Level
+// for in
+// for of
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

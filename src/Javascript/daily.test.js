@@ -35,6 +35,31 @@ test('email builder from an object / map', () => {
         .toEqual("bill.smith@evolveu.ca");
 });
 
+test('for loop for toDoGroceries', () => {
+    let toDos = ["brush teeth", "wash hands", "walk dog", "eat cake"];
+    expect(functions.toDoGroceries(toDos)).toStrictEqual(["brush teeth!", "wash hands!", "walk dog!", "eat cake!"]);
+    expect(functions.toDoGroceries(["buy pears"])).toStrictEqual(["buy pears!"]);
+    expect(functions.toDoGroceries(["eggs"])).toStrictEqual(["eggs!"]);
+});
+
+test('while loop for countDown', () => {
+    let numberCountDown = [10,9,8,7,6,5,4,3,2,1,0];
+    expect(functions.countDown([10])).toEqual(0);
+    expect(functions.countDown([9])).toEqual(0);
+    expect(functions.countDown(-1)).toEqual(-1);
+});
+
+test('do/while loop for doWhileFunction', () => {
+    let counterTwo = 10;
+    expect(functions.doWhileFunction(10)).toBe("10hi");
+    expect(functions.doWhileFunction(9)).toBe("9hi");
+    expect(functions.doWhileFunction(-1)).toBe(-1);
+});
+
+
+
+
+
 // Great test requires:
 // [1] tests need to be rerunable
 // [2] ideal test is based on a pure function = has specific input, and one output
