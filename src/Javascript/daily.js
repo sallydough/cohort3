@@ -1,11 +1,35 @@
-export function assertEquals(a,b) {
+
+const functions = {
+
+assertEquals: (a,b) => {
     if(a === b) {
         return true;
     } else if (a !== b) {
         console.log(a , b);
         return false;
     }
+},
+
+makeEmailArr: (names) => {
+    let arrayNames = names;
+    const firstName = arrayNames[0].toLowerCase();
+    const lastName = arrayNames[1].toLowerCase();
+    let atEvolveU = "@evolveu.ca"
+    return firstName+"."+lastName+atEvolveU;
+},
+
+makeEmailObj: (objName) => {
+    let objectNames = objNames;
+    const firstObjName = objectNames[0].toLowerCase();
+    const lastObjName = objectNames[1].toLowerCase();
+    let atEvolveU = "@evolveu.ca"
+    return firstObj+"."+lastObj+atEvolveU;
+},
+
+
 }
+
+export default functions;
 //[1]. write test
 //[2]. to export: write 'export' in front of function
 //
