@@ -1,37 +1,47 @@
+// const varName = .....
+//let variable = ......
 
 const functions = {
 
-assertEquals: (a,b) => {
-    if(a === b) {
-        return true;
-    } else if (a !== b) {
-        console.log(a , b);
-        return false;
-    }
+// 2019-OCT-15 PREP FOR ARRAY
+
+// 'for in' loop
+// forInFunction:
+// function (detailedbasket) {
+//     const detailedBasket = {
+//         apples: 5,
+//         oranges: 10,
+//         grapes: 1000
+//     };
+
+//     for (item in detailedBasket) {
+//         console.log(item);
+        
+//     };return detailedBasket;
+// },
+
+// 'for of' loop
+
+animalJudgement: 
+function (animals) {
+    // let animals = ["pigs","bunnies","lamb","cow","ducks"];
+    let cute = " are so damn cute!";
+    let sweet=0;
+    for (let y of animals) {
+       sweet= y+cute;
+        
+    } return sweet; 
 },
 
-makeEmailArr: (names) => {
-    let arrayNames = names;
-    const firstName = arrayNames[0].toLowerCase();
-    const lastName = arrayNames[1].toLowerCase();
-    let atEvolveU = "@evolveu.ca"
-    return firstName+"."+lastName+atEvolveU;
-},
+// 'dowhile' loop
+// counterTwo: 10,
 
-makeEmailObj: (objNames) => {
-    let objectNames = objNames;
-    const firstObjName = objectNames["fname"].toLowerCase();
-    const lastObjName = objectNames["lname"].toLowerCase();
-    let atEvolveU = "@evolveu.ca"
-    return firstObjName+"."+lastObjName+atEvolveU;
-},
-
-// 'for' function
-toDoGroceries: (arrayToDo) => {
-    for(let itemList = 0; itemList < arrayToDo.length; itemList++) {
-        arrayToDo[itemList]= arrayToDo[itemList] + "!";
-    
-    }; return arrayToDo;
+doWhileFunction: (counterTwo) => {
+    do {
+        console.log(counterTwo);
+        counterTwo--;
+    } while (counterTwo > 0);
+    return counterTwo;
 },
 
 // 'while' function
@@ -43,39 +53,53 @@ countDown: (numberCountDown) => {
     }; return numberCountDown;
 },
 
-// 'dowhile' loop
-// doWhileFunction: (counterTwo) => {
-//     do {
-//         console.log(counterTwo);
-//         counterTwo.push("hi");
-//     } while (counter < 100);
-// },
+// 'for' function
+toDoGroceries: (arrayToDo) => {
+    for(let itemList = 0; itemList < arrayToDo.length; itemList++) {
+        arrayToDo[itemList]= arrayToDo[itemList] + "!";
+    
+    }; return arrayToDo;
+},
 
-// for of' loop
-forOfFunction: () => {
-    item=0
-    const basket = ['apples', 'oranges', 'grapes'];
-   
-    for(element of basket) {
-        console.log(basket[element]);
-     
-       return basket;
+//2019-OCT-11 makeEmailObjrecieves object**
+makeEmailObj: (objNames) => {
+    let objectNames = objNames;
+    const firstObjName = objectNames["fname"].toLowerCase();
+    const lastObjName = objectNames["lname"].toLowerCase();
+    let atEvolveU = "@evolveu.ca"
+    return firstObjName+"."+lastObjName+atEvolveU;
+},
+
+//2019-OCT-09 makeEmailArr recieve array**
+makeEmailArr: (names) => {
+    let arrayNames = names;
+    const firstName = arrayNames[0].toLowerCase();
+    const lastName = arrayNames[1].toLowerCase();
+    let atEvolveU = "@evolveu.ca"
+    return firstName+"."+lastName+atEvolveU;
+},
+
+//2019-OCT-07 assertEquals 
+assertEquals: (a,b) => {
+    if(a === b) {
+        return true;
+    } else if (a !== b) {
+        console.log(a , b);
+        return false;
     }
 },
 
-// for in
-forInFunction: (detailedbasket) => {
-    const detailedBasket = {
-        apples: 5,
-        oranges: 10,
-        grapes: 1000
-    };
 
-    for (item in detailedBasket) {
-        console.log(item);
-        return detailedBasket;
-    };
-},
+
+
+
+
+
+
+
+
+
+
 
 
 

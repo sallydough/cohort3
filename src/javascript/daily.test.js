@@ -1,29 +1,48 @@
 import functions from "./daily"
 
-//assertEquals 2019OCT07
+// 2019-OCT-15 PREP FOR ARRAY
 
-test("give me the true or false", () => {
-    expect(functions.assertEquals("a","b")).toBe(false);
-    expect(functions.assertEquals("a","a")).toBe(true);
-    expect(functions.assertEquals(1,2)).toBe(false);
-    expect(functions.assertEquals(2,2)).toBe(true);
-    expect(functions.assertEquals("2",2)).toBe(false);
-    expect(functions.assertEquals("This value","This value")).toBe(true);
+// 'for in' loop
+// test('while loop for forInFunction', () => {
+    
+//     expect(functions.forInFunction([10])).toEqual(0);
+//     expect(functions.forInFunction([9])).toEqual(0);
+//     expect(functions.forInFunction(-1)).toEqual(-1);
+// });
+
+//'for of' loop
+test('while loop for animalJudgement', () => {
+    let animals = ["pigs","bunnies","lambs","cows","ducks"];
+    expect(functions.animalJudgement(animals)).toBe("ducks are so damn cute!");
+    expect(functions.animalJudgement(["Lawrence"])).toBe("Lawrence are so damn cute!");
+    expect(functions.animalJudgement(["Sally",12])).toBe("12 are so damn cute!");
 });
 
-//makeEmailArr 2019OCT09 recieve array**
-
-test('email builder from an array', () => {
-    const name = ["first", "last"];
-    expect(functions.makeEmailArr(name))
-        .toEqual("first.last@evolveu.ca");
-    expect(functions.makeEmailArr(["First", "Last"]))
-        .toEqual("first.last@evolveu.ca");
-    expect(functions.makeEmailArr(["Bill", "Smith"]))
-        .toEqual("bill.smith@evolveu.ca");
+//'dowhile' loop
+test('do/while loop for doWhileFunction', () => {
+    
+    expect(functions.doWhileFunction(10)).toBe(0);
+    expect(functions.doWhileFunction(3)).toBe(0);
+    expect(functions.doWhileFunction(-1)).toBe(-2);
 });
 
-//makeEmailObj 2019OCT11 recieves object**
+//'while' loop
+test('while loop for countDown', () => {
+    let numberCountDown = [10,9,8,7,6,5,4,3,2,1,0];
+    expect(functions.countDown([10])).toEqual(0);
+    expect(functions.countDown([9])).toEqual(0);
+    expect(functions.countDown(-1)).toEqual(-1);
+});
+
+//'for' loop
+test('for loop for toDoGroceries', () => {
+    let toDos = ["brush teeth", "wash hands", "walk dog", "eat cake"];
+    expect(functions.toDoGroceries(toDos)).toStrictEqual(["brush teeth!", "wash hands!", "walk dog!", "eat cake!"]);
+    expect(functions.toDoGroceries(["buy pears"])).toStrictEqual(["buy pears!"]);
+    expect(functions.toDoGroceries(["eggs"])).toStrictEqual(["eggs!"]);
+});
+
+//2019-OCT-11 makeEmailObjrecieves object**
 
 test('email builder from an object / map', () => {
     const name = { fname: 'first', lname: 'last' };
@@ -35,40 +54,42 @@ test('email builder from an object / map', () => {
         .toEqual("bill.smith@evolveu.ca");
 });
 
-test('for loop for toDoGroceries', () => {
-    let toDos = ["brush teeth", "wash hands", "walk dog", "eat cake"];
-    expect(functions.toDoGroceries(toDos)).toStrictEqual(["brush teeth!", "wash hands!", "walk dog!", "eat cake!"]);
-    expect(functions.toDoGroceries(["buy pears"])).toStrictEqual(["buy pears!"]);
-    expect(functions.toDoGroceries(["eggs"])).toStrictEqual(["eggs!"]);
+//2019-OCT-09 makeEmailArr recieve array**
+
+test('email builder from an array', () => {
+    const name = ["first", "last"];
+    expect(functions.makeEmailArr(name))
+        .toEqual("first.last@evolveu.ca");
+    expect(functions.makeEmailArr(["First", "Last"]))
+        .toEqual("first.last@evolveu.ca");
+    expect(functions.makeEmailArr(["Bill", "Smith"]))
+        .toEqual("bill.smith@evolveu.ca");
 });
 
-test('while loop for countDown', () => {
-    let numberCountDown = [10,9,8,7,6,5,4,3,2,1,0];
-    expect(functions.countDown([10])).toEqual(0);
-    expect(functions.countDown([9])).toEqual(0);
-    expect(functions.countDown(-1)).toEqual(-1);
+//2019-OCT-07 assertEquals 
+
+test("give me the true or false", () => {
+    expect(functions.assertEquals("a","b")).toBe(false);
+    expect(functions.assertEquals("a","a")).toBe(true);
+    expect(functions.assertEquals(1,2)).toBe(false);
+    expect(functions.assertEquals(2,2)).toBe(true);
+    expect(functions.assertEquals("2",2)).toBe(false);
+    expect(functions.assertEquals("This value","This value")).toBe(true);
 });
 
-// test('do/while loop for doWhileFunction', () => {
-//     let counterTwo = 10;
-//     expect(functions.doWhileFunction(10)).toBe("10hi");
-//     expect(functions.doWhileFunction(9)).toBe("9hi");
-//     expect(functions.doWhileFunction(-1)).toBe(-1);
-// });
 
-test('while loop for forOfFunction', () => {
-    
-    expect(functions.forOfFunction(basket)).toBe(['apples', 'oranges', 'grapes']);
-    expect(functions.forOfFunction(['yes', 'no'])).toBe(['yes', 'no']);
-    expect(functions.forOfFunction(["Sally",12])).toBe(["Sally", 12]);
-});
 
-test('while loop for forInFunction', () => {
-    
-    expect(functions.forInFunction([10])).toEqual(0);
-    expect(functions.forInFunction([9])).toEqual(0);
-    expect(functions.forInFunction(-1)).toEqual(-1);
-});
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Great test requires:
@@ -82,14 +103,6 @@ test('while loop for forInFunction', () => {
 //       expect(functionName(parameter1,parameter2)).tobe(datatype);
 //       expect(functionName(parameter1,parameter2)).tobe(datatype);
 //     });
-
-
-
-
-
-
-
-
 
 // import functions from './functions'
 
