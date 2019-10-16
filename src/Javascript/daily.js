@@ -26,8 +26,7 @@ makeEmailObj: (objNames) => {
     return firstObjName+"."+lastObjName+atEvolveU;
 },
 
-// Let’s dig deeper into arrays. Read the documentation on the following and create examples of each one:
-
+// 'for' function
 toDoGroceries: (arrayToDo) => {
     for(let itemList = 0; itemList < arrayToDo.length; itemList++) {
         arrayToDo[itemList]= arrayToDo[itemList] + "!";
@@ -35,6 +34,7 @@ toDoGroceries: (arrayToDo) => {
     }; return arrayToDo;
 },
 
+// 'while' function
 countDown: (numberCountDown) => {
     
     while(numberCountDown > 0) {
@@ -43,21 +43,42 @@ countDown: (numberCountDown) => {
     }; return numberCountDown;
 },
 
-doWhileFunction: (counterTwo) => {
-    do {
-        console.log(counterTwo);
-        counterTwo.push("hi");
-  
+// 'dowhile' loop
+// doWhileFunction: (counterTwo) => {
+//     do {
+//         console.log(counterTwo);
+//         counterTwo.push("hi");
+//     } while (counter < 100);
+// },
+
+// for of' loop
+forOfFunction: () => {
+    item=0
+    const basket = ['apples', 'oranges', 'grapes'];
+   
+    for(element of basket) {
+        console.log(basket[element]);
+     
+       return basket;
+    }
 },
 
-// Basics
-// for
-// while
-// do while
-
-// Next Level
 // for in
-// for of
+forInFunction: (detailedbasket) => {
+    const detailedBasket = {
+        apples: 5,
+        oranges: 10,
+        grapes: 1000
+    };
+
+    for (item in detailedBasket) {
+        console.log(item);
+        return detailedBasket;
+    };
+},
+
+
+
 
 
 

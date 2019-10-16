@@ -49,15 +49,26 @@ test('while loop for countDown', () => {
     expect(functions.countDown(-1)).toEqual(-1);
 });
 
-test('do/while loop for doWhileFunction', () => {
-    let counterTwo = 10;
-    expect(functions.doWhileFunction(10)).toBe("10hi");
-    expect(functions.doWhileFunction(9)).toBe("9hi");
-    expect(functions.doWhileFunction(-1)).toBe(-1);
+// test('do/while loop for doWhileFunction', () => {
+//     let counterTwo = 10;
+//     expect(functions.doWhileFunction(10)).toBe("10hi");
+//     expect(functions.doWhileFunction(9)).toBe("9hi");
+//     expect(functions.doWhileFunction(-1)).toBe(-1);
+// });
+
+test('while loop for forOfFunction', () => {
+    
+    expect(functions.forOfFunction(basket)).toBe(['apples', 'oranges', 'grapes']);
+    expect(functions.forOfFunction(['yes', 'no'])).toBe(['yes', 'no']);
+    expect(functions.forOfFunction(["Sally",12])).toBe(["Sally", 12]);
 });
 
-
-
+test('while loop for forInFunction', () => {
+    
+    expect(functions.forInFunction([10])).toEqual(0);
+    expect(functions.forInFunction([9])).toEqual(0);
+    expect(functions.forInFunction(-1)).toEqual(-1);
+});
 
 
 // Great test requires:
