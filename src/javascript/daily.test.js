@@ -1,5 +1,65 @@
 import functions from "./daily"
 
+
+
+
+
+
+
+
+
+
+//sort function
+test('does my sortJungle work?', () => {
+    let jungle = ["tiger", "toucan", "leopard","gorilla"];
+    expect(functions.sortJungle(["tiger", "toucan", "leopard","gorilla"])).toEqual(["gorilla","leopard","tiger", "toucan"]);
+    expect(functions.sortJungle(["a", "d", "c", "b"])).toEqual(["a", "b", "c", "d"]);
+    expect(functions.sortJungle(["cattle", "boar","ducks"])).toEqual(["boar", "cattle", "ducks"]);
+});
+
+// 'filter' function
+
+
+
+// 'reduce' function
+
+
+
+// 'map' function
+test('does my mapNumSquared work?', () => {
+    let numNumbers = [1,2,3,4];
+    expect(functions.mapNumSquared([1,2,3,4])).toEqual(["1","4","9","16"]);
+    expect(functions.mapNumSquared([5,6])).toEqual([25,36]);
+    expect(functions.mapNumSquared([10,200,45])).toEqual([100,40000,2025]);
+});
+
+// 'forEach'function
+test('does my forEachFruits work?', () => {
+    let fruits = ["apples", "grapes", "oranges"]
+    expect(functions.forEachFruits(["apples", "grapes", "oranges"])).toEqual(["apples are cool!", "grapes are cool!", "oranges are cool!"]);
+    expect(functions.forEachFruits(["cattles", "boars"])).toEqual(["cattles are cool!", "boars are cool!"]);
+    expect(functions.forEachFruits(["anitas","sallys","kevins"])).toEqual(["anitas are cool!","sallys are cool!","kevins are cool!"]);
+});
+
+//spliced function
+test('does my splicedNewZoo work?', () => {
+    let zoo = ["apes","camels","peacock","lion","tiger"];
+    expect(functions.splicedNewZoo(["apes","camels","peacock","lion","tiger"])).toEqual(["apes","hippos","peacock","lion","tiger"]);
+    expect(functions.splicedNewZoo(["cattle", "boar", "horse", "goats"])).toEqual(["cattle", "hippos", "horse", "goats"]);
+    expect(functions.splicedNewZoo(["anita","camels","sally","kevin","tiger"])).toEqual(["anita","hippos","sally","kevin","tiger"]);
+    expect(functions.splicedNewZoo(["cattle", "boar","rat", "cats", "dogs", "horse", "goats"])).toEqual(["cattle", "hippos","rat", "cats", "dogs", "horse", "goats"]);
+});
+
+//slice function
+test('does my slicedNewFarm work?', () => {
+    let farm = ["cattle", "boar", "horse", "chickens"];
+    expect(functions.slicedNewFarm(["cattle", "boar", "horse", "chickens"])).toEqual(["chickens"]);
+    expect(functions.slicedNewFarm(["cattle", "boar", "horse", "goats"])).toEqual(["goats"]);
+    expect(functions.slicedNewFarm(["cattle", "boar","ducks", "horse", "goats"])).toEqual(["horse"]);
+    expect(functions.slicedNewFarm(["cattle", "boar","rat", "cats", "dogs", "horse", "goats"])).toEqual(["cats"]);
+});
+
+
 // 2019-OCT-15 PREP FOR ARRAY
 
 // 'for in' loop

@@ -3,6 +3,78 @@
 
 const functions = {
 
+//2019-OCT-18 WHATS MY COVERAGE
+
+// Run your coverage report and send the output to Larry as a pdf file. Follow these steps:
+    
+// run your coverage report: npm test -- --coverage
+// look at the html file created: code/<<your repository>>/coverage/lcov-report/index.html
+// view in the browser. A double click on the file should do it
+// right click and select the “Print” option
+// print to pdf
+// email Larry the pdf (we will be doing this a few more times in the following weeks)
+    
+
+
+
+
+
+
+//2019-OCT-16/17 : MORE WITH ARRAYS
+
+// Continue from yesterday. Read the article:
+// https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d 
+
+// 'sort' function
+sortJungle: (jungle) => {
+    // let jungle = ["tiger", "toucan", "leopard","gorilla"];
+    jungle.sort();
+    return jungle;
+},
+
+// 'filter' function
+
+
+
+// 'reduce' function
+
+
+
+// 'map' function
+mapNumSquared: (numNumbers) => {
+    // let numNumbers = [1,2,3,4];
+    let numSquared = numNumbers.map(function(number) {
+        number * number;
+    }); return numSquared;
+},
+
+
+
+// 'forEach'function
+forEachFruits: (fruits) => {
+    // let fruits = ["apples", "grapes", "oranges"]
+    let emptyFruits = [];
+
+    fruits.forEach(function(item){
+        emptyFruits.push(item + " are cool!")
+    }); return emptyFruits;
+},
+
+//splice function
+splicedNewZoo: (zoo) => {
+    // let zoo = ["apes","camels","peacock","lion","tiger"];
+    let slicedZoo = zoo.splice(1,1,"hippos");
+    return zoo;
+},
+
+//slice function
+slicedNewFarm: (farm) => {
+    // let farm = ["cattle", "boar", "horse", "chickens"];
+    let sliceFarm = farm.slice(3,4);
+    return sliceFarm;
+},
+
+
 // 2019-OCT-15 PREP FOR ARRAY
 
 // 'for in' loop
