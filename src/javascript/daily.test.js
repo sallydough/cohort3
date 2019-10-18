@@ -3,12 +3,6 @@ import functions from "./daily"
 
 
 
-
-
-
-
-
-
 //sort function
 test('does my sortJungle work?', () => {
     let jungle = ["tiger", "toucan", "leopard","gorilla"];
@@ -18,17 +12,27 @@ test('does my sortJungle work?', () => {
 });
 
 // 'filter' function
-
+test('does my filteredFunctionBigSmall work?', () => {
+    let numbersBigAndSmall= [0,2,4,6,8,10];
+    expect(functions.filteredFunctionBigSmall ([0,1,2,3,4,5,6])).toEqual([5,6]);
+    expect(functions.filteredFunctionBigSmall ([-1,3,-2,8,4,-10])).toEqual([8]);
+    expect(functions.filteredFunctionBigSmall ([2,6,8,5,0,-1])).toEqual([6,8,5]);
+});
 
 
 // 'reduce' function
-
+test('does my reduceFunctionSum work?', () => {
+    let numberSum = [1,-1,4,6];
+    expect(functions.reduceFunctionSum([1,-1,4,6])).toEqual(10);
+    expect(functions.reduceFunctionSum([5,6])).toEqual(11);
+    expect(functions.reduceFunctionSum([10,200,45])).toEqual(255);
+});
 
 
 // 'map' function
 test('does my mapNumSquared work?', () => {
     let numNumbers = [1,2,3,4];
-    expect(functions.mapNumSquared([1,2,3,4])).toEqual(["1","4","9","16"]);
+    expect(functions.mapNumSquared([1,2,3,4])).toEqual([1,4,9,16]);
     expect(functions.mapNumSquared([5,6])).toEqual([25,36]);
     expect(functions.mapNumSquared([10,200,45])).toEqual([100,40000,2025]);
 });

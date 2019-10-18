@@ -6,24 +6,8 @@ const functions = {
 //2019-OCT-18 WHATS MY COVERAGE
 
 // Run your coverage report and send the output to Larry as a pdf file. Follow these steps:
-    
-// run your coverage report: npm test -- --coverage
-// look at the html file created: code/<<your repository>>/coverage/lcov-report/index.html
-// view in the browser. A double click on the file should do it
-// right click and select the “Print” option
-// print to pdf
-// email Larry the pdf (we will be doing this a few more times in the following weeks)
-    
-
-
-
-
-
 
 //2019-OCT-16/17 : MORE WITH ARRAYS
-
-// Continue from yesterday. Read the article:
-// https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d 
 
 // 'sort' function
 sortJungle: (jungle) => {
@@ -33,22 +17,29 @@ sortJungle: (jungle) => {
 },
 
 // 'filter' function
-
-
+filteredFunctionBigSmall: (numbersBigAndSmall) => {
+    // let numbersBigAndSmall= [0,2,4,6,8,10];
+    let filteredNumbersBigSmall = numbersBigAndSmall.filter(function(number) {
+        return number > 4;
+    }); return filteredNumbersBigSmall;
+},
 
 // 'reduce' function
-
-
+reduceFunctionSum: (numberSum) => {
+    // let numberSum = [1,-1,4,6];
+    let sum = numberSum.reduce((accumulator,currentValue) => {
+        return accumulator + currentValue;
+    }, 0 ); return sum;
+},
 
 // 'map' function
 mapNumSquared: (numNumbers) => {
     // let numNumbers = [1,2,3,4];
     let numSquared = numNumbers.map(function(number) {
-        number * number;
+        return number * number;
+
     }); return numSquared;
 },
-
-
 
 // 'forEach'function
 forEachFruits: (fruits) => {
