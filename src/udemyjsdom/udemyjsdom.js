@@ -1,5 +1,30 @@
 import { arrayExpression } from "@babel/types"
 
+
+
+
+
+
+
+///////////////////////////////////////////////
+//SEC11 Exercise07 : 'Objects/Arrays for FB App'
+///////////////////////////////////////////////
+// create successful FB login:
+var usernamePrompt = prompt("Whats your username?");
+var passwordPrompt = prompt("Whats your password?");
+
+function signIn (user,pass) {
+    if (user === database[0].username &&
+        pass === database[0].password) {
+            console.log(newsfeed);
+        } else {
+            alert( "sorry, wrong user or pass!");
+        }
+}
+
+//call function to be executed:
+signIn(usernamePrompt,passwordPrompt);
+
 ///////////////////////////////////////////////
 //SEC11 Exercise07 : 'Objects/Arrays for FB App'
 ///////////////////////////////////////////////
