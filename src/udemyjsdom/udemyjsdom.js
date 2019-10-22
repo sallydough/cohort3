@@ -1,10 +1,36 @@
 import { arrayExpression } from "@babel/types"
 
 ///////////////////////////////////////////////
-//SEC11 Exercise07 : ''
+//SEC11 Exercise07 : 'Objects/Arrays for FB App'
 ///////////////////////////////////////////////
+// 1. Create an object that has properties "username" and "password". Fill those values in with strings.
+var fbUserPass = {
+    username: "Sally",
+    password: "ducks"
+}
 
-
+// 2. Create an array which contains the object you have made above and name the array "database".
+var database = [
+    {
+        username: "Sally",
+        password: "ducks"
+    }
+];
+// 3. Create an array called "newsfeed" which contains 3 objects with properties "username" and "timeline".
+var newsfeed = [
+    {
+        username: "Candis",
+        timeline: "Yo Whatssup?"
+    },
+    {
+        username: "Gabby",
+        timeline: "Life be dope"
+    },
+    {
+        username: "Bob"
+        timeline: "I commence in cool shit"
+    }
+]
 
 ///////////////////////////////////////////////
 //SEC11 Exercise06 : 'Arrays'
