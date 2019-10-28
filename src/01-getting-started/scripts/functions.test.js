@@ -1,5 +1,5 @@
 import functions from './functions'
-
+//size 
 test('Check the sizes', () => {
     expect(functions.size(-1)).toBe("negative"); // Consider the edge cases
     expect(functions.size(0)).toBe("small");
@@ -10,6 +10,28 @@ test('Check the sizes', () => {
 });
 
 test('Does that add function work?', () => {
-    expect(functions.add(1,2)).toBe(3);
-    expect(functions.add(101,202)).toBe(303);
+    expect(functions.add(1, 2)).toBe(3);
+    expect(functions.add(101, 202)).toBe(303);
 });
+
+//Calculator
+
+//sum function
+test('sum', () => {
+    expect(functions.sum(2, 1)).toEqual(3);
+});
+//subtract function
+test ('subtract', () => {
+    expect(functions.subtract(2, 1)).toEqual(1);
+    expect(functions.subtract(-10, -1)).toEqual(-9);
+    expect(functions.subtract(0, "s")).toEqual(NaN);
+});
+//multiply function
+test('multiply', () => {
+    expect(functions.multiply(10, 2)).toEqual(20);
+});
+//divide function
+test('divide', () => {
+    expect(functions.divide(2, 1)).toEqual(2);
+});
+

@@ -25,3 +25,17 @@ test('helloworld test', () => {
 test('sum', () => {
     expect(functions.sum(2, 1)).toEqual(3);
 });
+
+test ('subtract', () => {
+    expect(functions.subtract(2, 1)).toEqual(1);
+    expect(functions.subtract(-10, -1)).toEqual(-9);
+    expect(functions.subtract(0, "s")).toEqual(NaN);
+});
+
+test('multiply', () => {
+    expect(functions.multiply(10, 2)).toEqual(20);
+});
+
+test('divide', () => {
+    expect(functions.divide(2, 1)).toEqual(2);
+});
