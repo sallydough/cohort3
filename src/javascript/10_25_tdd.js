@@ -1,7 +1,7 @@
 const functions = {
 
-    helloWorld: (quote) => {
-        console.log(quote);
+    helloWorld: () => {
+        console.log("Yoooooooooooo");
     },
 
     sum: (par1, par2) => {

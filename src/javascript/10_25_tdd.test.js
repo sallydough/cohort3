@@ -18,7 +18,7 @@ import functions from './10_25_tdd.js'
 
 test('helloworld test', () => {
     console.log("hello World");
-    // functions.helloWorld("hello world whats good?")
+    functions.helloWorld("hello world whats good?");
 });
 
 

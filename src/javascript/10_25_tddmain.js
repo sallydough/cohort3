@@ -7,12 +7,24 @@ console.log("hello World");
 //add event listener when I click on 'idDoIt' button: */
 idDoIt.addEventListener("click", () => {
     //
+
     let firstNumInput = Number(idEnterFirstNum.value);
     let secondNumInput = Number(idEnterSecondNum.value);
     console.log(firstNumInput, secondNumInput);
+    functions.helloWorld("quote");
+
+    const sumNum1 = functions.sum(firstNumInput, secondNumInput);
+    console.log(sumNum1);
+
 
 });
-// const firstNumberInput = document.getElementById("idEnterFirstNumber");
-// console.log(firstNumberInput);
-// .addEventListener("click", onButtonClicked);
-// console.log("hello world");
+//Add button
+// idAdd.addEventListener("click", () => {
+
+
+//     let firstNumInput = Number(idEnterFirstNum.value);
+//     let secondNumInput = Number(idEnterSecondNum.value);
+//     // console.log(firstNumInput , secondNumInput);
+//     functions.sum();
+
+// });
