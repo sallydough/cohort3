@@ -1,156 +1,181 @@
+import { isLogicalExpression } from "@babel/types";
+
 // const varName = .....
 //let variable = ......
 
 const functions = {
 
-//2019-OCT-18 WHATS MY COVERAGE
+    // //2019-OCT 22 : "LOOPSTAFF"
 
-// Run your coverage report and send the output to Larry as a pdf file. Follow these steps:
+    // loopStaffFunction: () => {
 
-//2019-OCT-16/17 : MORE WITH ARRAYS
+    //     const data = {
+    //         staff: [
+    //             { fname: "Jane", lname: "Smith", balance: 10 },
+    //             { fname: "Liam", lname: "Henry", balance: 1000 },
+    //             { fname: "Emma", lname: "Jones", balance: 1330 },
+    //             { fname: "Olivia", lname: "Notly", balance: 310 },
+    //             { fname: "Noah", lname: "Ho", balance: 503 },
+    //             { fname: "William", lname: "Lee", balance: 520 },
+    //             { fname: "Benjamin", lname: "Amis", balance: 150 },
+    //         ],
+    //         company: "EvolveU",
+    //         city: "Calgary",
+    //         prov: "Alberta"
+    //     };
+    //     let loopstaff = data.map(function() {
+    //         makeEmailObj();
+    //         return loopstaff;
+    // };
 
-// 'sort' function
-sortJungle: (jungle) => {
-    // let jungle = ["tiger", "toucan", "leopard","gorilla"];
-    jungle.sort();
-    return jungle;
-},
+    //2019-OCT-18 WHATS MY COVERAGE
 
-// 'filter' function
-filteredFunctionBigSmall: (numbersBigAndSmall) => {
-    // let numbersBigAndSmall= [0,2,4,6,8,10];
-    let filteredNumbersBigSmall = numbersBigAndSmall.filter(function(number) {
-        return number > 4;
-    }); return filteredNumbersBigSmall;
-},
+    // Run your coverage report and send the output to Larry as a pdf file. Follow these steps:
 
-// 'reduce' function
-reduceFunctionSum: (numberSum) => {
-    // let numberSum = [1,-1,4,6];
-    let sum = numberSum.reduce((accumulator,currentValue) => {
-        return accumulator + currentValue;
-    }, 0 ); return sum;
-},
+    //2019-OCT-16/17 : MORE WITH ARRAYS
 
-// 'map' function
-mapNumSquared: (numNumbers) => {
-    // let numNumbers = [1,2,3,4];
-    let numSquared = numNumbers.map(function(number) {
-        return number * number;
+    // 'sort' function
+    sortJungle: (jungle) => {
+        // let jungle = ["tiger", "toucan", "leopard","gorilla"];
+        jungle.sort();
+        return jungle;
+    },
 
-    }); return numSquared;
-},
+    // 'filter' function
+    filteredFunctionBigSmall: (numbersBigAndSmall) => {
+        // let numbersBigAndSmall= [0,2,4,6,8,10];
+        let filteredNumbersBigSmall = numbersBigAndSmall.filter(function (number) {
+            return number > 4;
+        }); return filteredNumbersBigSmall;
+    },
 
-// 'forEach'function
-forEachFruits: (fruits) => {
-    // let fruits = ["apples", "grapes", "oranges"]
-    let emptyFruits = [];
+    // 'reduce' function
+    reduceFunctionSum: (numberSum) => {
+        // let numberSum = [1,-1,4,6];
+        let sum = numberSum.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue;
+        }, 0); return sum;
+    },
 
-    fruits.forEach(function(item){
-        emptyFruits.push(item + " are cool!")
-    }); return emptyFruits;
-},
+    // 'map' function
+    mapNumSquared: (numNumbers) => {
+        // let numNumbers = [1,2,3,4];
+        let numSquared = numNumbers.map(function (number) {
+            return number * number;
 
-//splice function
-splicedNewZoo: (zoo) => {
-    // let zoo = ["apes","camels","peacock","lion","tiger"];
-    let slicedZoo = zoo.splice(1,1,"hippos");
-    return zoo;
-},
+        }); return numSquared;
+    },
 
-//slice function
-slicedNewFarm: (farm) => {
-    // let farm = ["cattle", "boar", "horse", "chickens"];
-    let sliceFarm = farm.slice(3,4);
-    return sliceFarm;
-},
+    // 'forEach'function
+    forEachFruits: (fruits) => {
+        // let fruits = ["apples", "grapes", "oranges"]
+        let emptyFruits = [];
+
+        fruits.forEach(function (item) {
+            emptyFruits.push(item + " are cool!")
+        }); return emptyFruits;
+    },
+
+    //splice function
+    splicedNewZoo: (zoo) => {
+        // let zoo = ["apes","camels","peacock","lion","tiger"];
+        let slicedZoo = zoo.splice(1, 1, "hippos");
+        return zoo;
+    },
+
+    //slice function
+    slicedNewFarm: (farm) => {
+        // let farm = ["cattle", "boar", "horse", "chickens"];
+        let sliceFarm = farm.slice(3, 4);
+        return sliceFarm;
+    },
 
 
-// 2019-OCT-15 PREP FOR ARRAY
+    // 2019-OCT-15 PREP FOR ARRAY
 
-// 'for in' loop
-// forInFunction:
-// function (detailedbasket) {
-//     const detailedBasket = {
-//         apples: 5,
-//         oranges: 10,
-//         grapes: 1000
-//     };
+    // 'for in' loop
+    // forInFunction:
+    // function (detailedbasket) {
+    //     const detailedBasket = {
+    //         apples: 5,
+    //         oranges: 10,
+    //         grapes: 1000
+    //     };
 
-//     for (item in detailedBasket) {
-//         console.log(item);
-        
-//     };return detailedBasket;
-// },
+    //     for (item in detailedBasket) {
+    //         console.log(item);
 
-// 'for of' loop
+    //     };return detailedBasket;
+    // },
 
-animalJudgement: 
-function (animals) {
-    // let animals = ["pigs","bunnies","lamb","cow","ducks"];
-    let cute = " are so damn cute!";
-    let sweet=0;
-    for (let y of animals) {
-       sweet= y+cute;
-        
-    } return sweet; 
-},
+    // 'for of' loop
 
-// 'dowhile' loop
-// counterTwo: 10,
+    animalJudgement:
+        function (animals) {
+            // let animals = ["pigs","bunnies","lamb","cow","ducks"];
+            let cute = " are so damn cute!";
+            let sweet = 0;
+            for (let y of animals) {
+                sweet = y + cute;
 
-doWhileFunction: (counterTwo) => {
-    do {
-        console.log(counterTwo);
-        counterTwo--;
-    } while (counterTwo > 0);
-    return counterTwo;
-},
+            } return sweet;
+        },
 
-// 'while' function
-countDown: (numberCountDown) => {
-    
-    while(numberCountDown > 0) {
-        console.log(numberCountDown);
-        numberCountDown--;
-    }; return numberCountDown;
-},
+    // 'dowhile' loop
+    // counterTwo: 10,
 
-// 'for' function
-toDoGroceries: (arrayToDo) => {
-    for(let itemList = 0; itemList < arrayToDo.length; itemList++) {
-        arrayToDo[itemList]= arrayToDo[itemList] + "!";
-    
-    }; return arrayToDo;
-},
+    doWhileFunction: (counterTwo) => {
+        do {
+            console.log(counterTwo);
+            counterTwo--;
+        } while (counterTwo > 0);
+        return counterTwo;
+    },
 
-//2019-OCT-11 makeEmailObjrecieves object**
-makeEmailObj: (objNames) => {
-    let objectNames = objNames;
-    const firstObjName = objectNames["fname"].toLowerCase();
-    const lastObjName = objectNames["lname"].toLowerCase();
-    let atEvolveU = "@evolveu.ca"
-    return firstObjName+"."+lastObjName+atEvolveU;
-},
+    // 'while' function
+    countDown: (numberCountDown) => {
 
-//2019-OCT-09 makeEmailArr recieve array**
-makeEmailArr: (names) => {
-    let arrayNames = names;
-    const firstName = arrayNames[0].toLowerCase();
-    const lastName = arrayNames[1].toLowerCase();
-    let atEvolveU = "@evolveu.ca"
-    return firstName+"."+lastName+atEvolveU;
-},
+        while (numberCountDown > 0) {
+            console.log(numberCountDown);
+            numberCountDown--;
+        }; return numberCountDown;
+    },
 
-//2019-OCT-07 assertEquals 
-assertEquals: (a,b) => {
-    if(a === b) {
-        return true;
-    } else if (a !== b) {
-        console.log(a , b);
-        return false;
-    }
-},
+    // 'for' function
+    toDoGroceries: (arrayToDo) => {
+        for (let itemList = 0; itemList < arrayToDo.length; itemList++) {
+            arrayToDo[itemList] = arrayToDo[itemList] + "!";
+
+        }; return arrayToDo;
+    },
+
+    //2019-OCT-11 makeEmailObjrecieves object**
+    makeEmailObj: (objNames) => {
+        let objectNames = objNames;
+        const firstObjName = objectNames["fname"].toLowerCase();
+        const lastObjName = objectNames["lname"].toLowerCase();
+        let atEvolveU = "@evolveu.ca"
+        return firstObjName + "." + lastObjName + atEvolveU;
+    },
+
+    //2019-OCT-09 makeEmailArr recieve array**
+    makeEmailArr: (names) => {
+        let arrayNames = names;
+        const firstName = arrayNames[0].toLowerCase();
+        const lastName = arrayNames[1].toLowerCase();
+        let atEvolveU = "@evolveu.ca"
+        return firstName + "." + lastName + atEvolveU;
+    },
+
+    //2019-OCT-07 assertEquals 
+    assertEquals: (a, b) => {
+        if (a === b) {
+            return true;
+        } else if (a !== b) {
+            console.log(a, b);
+            return false;
+        }
+    },
 
 
 
@@ -189,7 +214,7 @@ export default functions;
 //          console.log("helloworld");
  //     }
 
-/*	
+/*
 	Write the function that will create this output:
 
 *** the two values are not the same:
