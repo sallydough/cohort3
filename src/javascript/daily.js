@@ -5,28 +5,44 @@ import { isLogicalExpression } from "@babel/types";
 
 const functions = {
 
+
+
+    //2019-OCT-29: "More Array Exercises"
+    // 1.write a function to receive the same array (staff) and return the total of balances
+
+    loopStaffTotal: (array) => {
+        let total = array.reduce((accumulator, people) =>
+            accumulator + people.balance, 0);
+        return total;
+    },
+
+    // 2. write a function to receive the same array (staff) and return the average the balances
+
+    loopStaffAverage: (array) => {
+        let totalAccum = functions.loopStaffTotal(array);
+        let average = totalAccum / array.length;
+        return Number(average.toFixed(2));
+    },
+
+
+
+    //2019-OCT-25 : "loopStaff each / map"
+
+
+
+    //2019-OCT-24 : "loopStaff: in / of"
+
+
+
+
+
+
+
     // //2019-OCT 22 : "LOOPSTAFF"
-
-    // loopStaffFunction: () => {
-
-    //     const data = {
-    //         staff: [
-    //             { fname: "Jane", lname: "Smith", balance: 10 },
-    //             { fname: "Liam", lname: "Henry", balance: 1000 },
-    //             { fname: "Emma", lname: "Jones", balance: 1330 },
-    //             { fname: "Olivia", lname: "Notly", balance: 310 },
-    //             { fname: "Noah", lname: "Ho", balance: 503 },
-    //             { fname: "William", lname: "Lee", balance: 520 },
-    //             { fname: "Benjamin", lname: "Amis", balance: 150 },
-    //         ],
-    //         company: "EvolveU",
-    //         city: "Calgary",
-    //         prov: "Alberta"
-    //     };
-    //     let loopstaff = data.map(function() {
-    //         makeEmailObj();
-    //         return loopstaff;
-    // };
+    loopStaff: (staffArr) => {
+        let staffEmail = staffArr.map(functions.makeEmailObj);
+        return staffEmail;
+    },
 
     //2019-OCT-18 WHATS MY COVERAGE
 

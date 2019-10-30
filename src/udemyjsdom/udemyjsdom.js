@@ -380,7 +380,7 @@ then makes a dom
 // =====================
 
 document.getElementsByTagName();         (grabs element of tag element (ex: <h1>))
-document.getElementsByClassName();       (grab element by 'class' attribute in html)
+document.getElementsByClassName()[];       (grab element by 'class' attribute in html)
 document.getElementByID();               (gets element using id attribute)
 
 
@@ -390,7 +390,7 @@ document.querySelectorAll("li, h1")[array list];     (selects all of li and h1)
 ***check canIuse.com to see if selector can be used throughout all browsers
 
 document.querySelector("li").getAttribute("random") = finds attribute 'random' = 23
-document.querySelector("li").setAttribute("attributeNAme", "what you want to change its value to") = changes 23 into 1000
+document.querySelector("li").setAttribute("attributeName", "what you want to change its value to") = changes 23 into 1000
 
 
 
@@ -450,7 +450,7 @@ element.appendChild(variable)           (append a child to element which is 'var
 
 how to write an input and add it to list:
 1. write variables that geteleemntbyid of certain id tag
-        var button=document.getelementbyid("li");
+        var button=document.getelementbyid("enter");
         var input=document.geteleemntbyid("userinput")
         var ul=document.queryselector("ul");
 2. add button event listener (button.addeventlistener("click", function() {

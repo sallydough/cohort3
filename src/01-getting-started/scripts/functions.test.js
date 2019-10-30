@@ -35,3 +35,12 @@ test('divide', () => {
     expect(functions.divide(2, 1)).toEqual(2);
 });
 
+//Canadian Taxes
+
+test('hello world', () => {
+    let income= [1, 47000];
+    expect(functions.helloTaxWorld(income[0])).toEqual(0.15);
+    expect(functions.helloTaxWorld(income[1])).toEqual(7050);
+    // expect(functions.helloTaxWorld(income)).toEqual(7637.2);
+    // expect(functions.helloTaxWorld(income)).toEqual(7637.2);
+});
