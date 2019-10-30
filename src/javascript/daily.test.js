@@ -27,10 +27,55 @@ test('loopStaffAverage', () => {
     expect(functions.loopStaffAverage(data.staff)).toEqual(546.14);
 });
 
+//2019-OCT-25 : "loopStaff each / map"
 
 
+ //map
+ test('loopStaffMap', () => {
+    const staffEmail = functions.loopStaffMap(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
+});   
+
+//foreach
+test('loopStaffForEach', () => {
+    const staffEmail = functions.loopStaffForEach(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
+}); 
+
+//2019-OCT-24 : "loopStaff: in / of"
+
+//in
+test('loopStaffIn', () => {
+    const staffEmail = functions.loopStaffIn(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
+}); 
 
 
+//of
+// test('loopStaffOf', () => {
+//     const staffEmail = functions.loopStaffOf(data.staff);
+//     expect(staffEmail[0])
+//         .toEqual("jane.smith@evolveu.ca");
+//     expect(staffEmail[3])
+//         .toEqual("olivia.notly@evolveu.ca");
+//     expect(staffEmail[6])
+//         .toEqual("benjamin.amis@evolveu.ca");
+// }); 
 
 //2019-OCT 22 :"LOOPSTAFF"
 

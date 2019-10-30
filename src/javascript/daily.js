@@ -28,11 +28,37 @@ const functions = {
 
     //2019-OCT-25 : "loopStaff each / map"
 
+    loopStaffForEach: (array) => {
+        let staffEmailArray=[];
+        array.forEach(i => {
+        var newMEO = functions.makeEmailObj(i);
+        staffEmailArray.push(newMEO);
+        }); return staffEmailArray;
+    },
+
+    loopStaffMap: (array) => {
+        let staffEmail = array.map(functions.makeEmailObj);
+        return staffEmail;
+    },
+
 
 
     //2019-OCT-24 : "loopStaff: in / of"
 
+    loopStaffIn: (array) => {
+        let staffEmailArray=[];
+    
+        for (z in array) {
+            let staffInLoop = functions.makeEmailObj();
+            staffEmailArray.push(staffInLoop);
+        } return staffEmailArray;
 
+    },
+
+    // loopStaffOf: () => {
+        // let staffEmailArray=[];
+
+    // },
 
 
 
