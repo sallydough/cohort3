@@ -14,13 +14,27 @@ idBigDiv.addEventListener("click", () => {
 
 let bigDivGetEle = document.getElementById("idBigDiv")
 let count = 4;
+
 idAddDiv.addEventListener("click", () => {
     let newAddedDiv = document.createElement("div");
     // let newCountChild=bigDivGetEle.childElementCount;
     bigDivGetEle.appendChild(newAddedDiv);
     newAddedDiv.className = "bodyDiv1";
-    newAddedDiv.textContent = `number ${count}`;
+    newAddedDiv.textContent = `Card Number ${count}`;
     newAddedDiv.setAttribute("count", count++);
+
+})
+
+idCreateCard.addEventListener("click", () => {
+    console.log("create card");
+    const div= functions.addCard(idBigDiv);
+    // idBigDiv.appendChild(div);
+    // functions.addCard(idBigDiv);
+    // // functions.addCard(idBigDiv);
+    // // functions.addCard(idBigDiv);
+
+
+
 
 })
 
