@@ -1,5 +1,5 @@
 import functions from './functions'
-//size 
+/////////////////size////////////////////////////
 test('Check the sizes', () => {
     expect(functions.size(-1)).toBe("negative"); // Consider the edge cases
     expect(functions.size(0)).toBe("small");
@@ -14,7 +14,7 @@ test('Does that add function work?', () => {
     expect(functions.add(101, 202)).toBe(303);
 });
 
-//Calculator
+///////////////Calculator/////////////////////
 
 //sum function
 test('sum', () => {
@@ -35,12 +35,20 @@ test('divide', () => {
     expect(functions.divide(2, 1)).toEqual(2);
 });
 
-//Canadian Taxes
-
-test('hello world', () => {
-    let income= [1, 47000];
-    expect(functions.helloTaxWorld(income[0])).toEqual(0.15);
-    expect(functions.helloTaxWorld(income[1])).toEqual(7050);
-    // expect(functions.helloTaxWorld(income)).toEqual(7637.2);
-    // expect(functions.helloTaxWorld(income)).toEqual(7637.2);
+///////////////Canadian Taxes////////////////
+test("helloWorld", () => {
+    console.log("hi halloweeners");
+    functions.helloHalloween();
 });
+
+//test for basket top range number
+test("federtaxbasket test", () => {
+    expect(functions.CanadaFederalTax(-3)).toBe(0); //negative income
+    expect(functions.CanadaFederalTax(0)).toBe(0); //zero income
+    expect(functions.CanadaFederalTax(47630)).toBe(7144.50); // 0-47630 income range
+    expect(functions.CanadaFederalTax(95259)).toBe(16908.445); //47360-95259 income range
+    expect(functions.CanadaFederalTax(147667)).toBe(30534.525); // 95259-147667 income range
+    expect(functions.CanadaFederalTax(210371)).toBe(48718.685); // 147667-210371 income range
+    expect(functions.CanadaFederalTax(210372)).toBe(48719.015); // >210371 income range 
+});
+

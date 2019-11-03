@@ -1,6 +1,6 @@
 
 const functions = {
-    //size  
+    /////////////size/////////////////
     size: (num) => {
         if (num < 0) return "negative";
         if (num < 10) return "small";
@@ -9,7 +9,7 @@ const functions = {
     },
 
 
-    //Calculator
+    ///////////Calculator////////////
     add: (num1, num2) => {
         return num1 + num2;
     },
@@ -30,57 +30,67 @@ const functions = {
         return par1 / par2;
     },
 
+    ////////////////Canadian Taxes///////////////
 
-    //Canadian Taxes
-
-    helloTaxWorld: (income) => {
-        let tax = income * 0.15;
-        return Number(tax);
-        if(income <= 47630)
-        //     let tax15 = 0.15 * income
-        //     let remainder = 0; 
-        //     if (income > 47256 && income < 96256) {
-        //         remainder = income - 47256;
-        //         let tax20 = remainder * 0.20;
-        //         let resultTax = tax15 + tax20;
-        //         return resultTax;
-        //     }
-        // },
-
-        // const bracketA = 47630;
-        // const bracketB = 95259;
-        // const bracketC = 147667;
-        // const bracketD = 210371;
-
-        // const rateA = 0.15;
-        // const rateB = 0.205;
-        // const rateC = 0.26;
-        // const rateD = 0.29;
-        // const rateE = 0.33;
-
-    
-        // let taxSum = 0;
-        // if (income > bracketA) {
-        //     taxSum = taxSum + ((income - bracketA) * rateB);
-        //  } else { taxSum = income * rateA;
-        // }
-        // if (income> bracketB) {
-        //     taxSum = taxSum + ((income - bracketB) * rateC)
-        // }
-        // if (income > bracketC) {
-        //     taxSum = taxSum + ((income - bracketC) * rateD)
-        // }
-        // if (income > bracketD) {
-        //     taxSum = taxSum + ((income - bracketD) * rateE)
-        // } return taxSum.toFixed(2);
+    helloHalloween: () => {
+        console.log("happer hallos");
     },
 
+    CanadaFederalTax: (income) => {
+        const basketTaxRate1 = 0.15;
+        const basketTaxRate2 = 0.205;
+        const basketTaxRate3 = 0.26;
+        const basketTaxRate4 = 0.29;
+        const basketTaxRate5 = 0.33;
 
+        const basketTopIncomeRange1 = 47630;
+        const basketTopIncomeRange2 = 95259;
+        const basketTopIncomeRange3 = 147667;
+        const basketTopIncomeRange4 = 210371;
 
+        const basketSumTax1 = basketTopIncomeRange1 * basketTaxRate1;
+        const basketSumTax2 = (basketTopIncomeRange2 - basketTopIncomeRange1) * basketTaxRate2;
+        const basketSumTax3 = (basketTopIncomeRange3 - basketTopIncomeRange2) * basketTaxRate3;
+        const basketSumTax4 = (basketTopIncomeRange4 - basketTopIncomeRange3) * basketTaxRate4;
 
+        console.log("income is: " + income)
+        let tax = 0;
 
+        if (income <= 0) {
+            return 0;
+        } else if ((income > 0) && (income <= basketTopIncomeRange1)) {
+            tax = income * basketTaxRate1;
+            console.log("Range1 income tax is: " + tax);
+            return tax;
+        } else if ((income > basketTopIncomeRange1) && (income <= basketTopIncomeRange2)) {
+            tax = basketSumTax1 + (income - basketTopIncomeRange1) * basketTaxRate2;
+            console.log("Range2 income tax is: " + tax);
+            return tax;
+        } else if ((income > basketTopIncomeRange2) && (income <= basketTopIncomeRange3)) {
+            tax = basketSumTax1 + basketSumTax2 + (income - basketTopIncomeRange2) * basketTaxRate3;
+            console.log("Range3 income tax is: " + tax);
+            return tax;
+        } else if ((income > basketTopIncomeRange3) && (income <= basketTopIncomeRange4)) {
+            tax = basketSumTax1 + basketSumTax2 + basketSumTax3 + (income - basketTopIncomeRange3) * basketTaxRate4;
+            console.log("Range4 income tax is: " + tax);
+            return tax;
+        } else if ((income > basketTopIncomeRange4)) {
+            tax = basketSumTax1 + basketSumTax2 + basketSumTax3 + basketSumTax4 + (income - basketTopIncomeRange4) * basketTaxRate5;
+            console.log("Range5 income tax is " + tax);
+            return tax;
+        }
+    },
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
