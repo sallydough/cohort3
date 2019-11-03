@@ -22,29 +22,29 @@ const functions = {
         const basketSumTax4 = (basketTopIncomeRange4 - basketTopIncomeRange3) * basketTaxRate4;
 
         console.log("income is: " + income)
-        let tax=0;
+        let tax = 0;
 
         if (income <= 0) {
             return 0;
         } else if ((income > 0) && (income <= basketTopIncomeRange1)) {
             tax = income * basketTaxRate1;
-            console.log("income tax in range 1 is: " + tax);
+            console.log("Range1 income tax is: " + tax);
             return tax;
         } else if ((income > basketTopIncomeRange1) && (income <= basketTopIncomeRange2)) {
             tax = basketSumTax1 + (income - basketTopIncomeRange1) * basketTaxRate2;
-            console.log("income tax in range 2 is: " + tax);
+            console.log("Range2 income tax is: " + tax);
             return tax;
         } else if ((income > basketTopIncomeRange2) && (income <= basketTopIncomeRange3)) {
             tax = basketSumTax1 + basketSumTax2 + (income - basketTopIncomeRange2) * basketTaxRate3;
-            console.log("income tax in range 3 is: " + tax);
+            console.log("Range3 income tax is: " + tax);
             return tax;
         } else if ((income > basketTopIncomeRange3) && (income <= basketTopIncomeRange4)) {
             tax = basketSumTax1 + basketSumTax2 + basketSumTax3 + (income - basketTopIncomeRange3) * basketTaxRate4;
-            console.log("income tax in range 4 is: " + tax);
+            console.log("Range4 income tax is: " + tax);
             return tax;
         } else if ((income > basketTopIncomeRange4)) {
             tax = basketSumTax1 + basketSumTax2 + basketSumTax3 + basketSumTax4 + (income - basketTopIncomeRange4) * basketTaxRate5;
-            console.log("income tax in range 5 is: " + tax);
+            console.log("Range5 income tax is " + tax);
             return tax;
         }
     },

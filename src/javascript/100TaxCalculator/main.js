@@ -1,7 +1,7 @@
 import functions from './functions.js'
 
-
-idButton.addEventListener("click", () => {
+idCalcTax.addEventListener("click", () => {
     functions.helloHalloween();
-    functions.CanadaFederalTax();
-})
+    const taxFinalResult = functions.CanadaFederalTax(idIncomeValue.value);
+    idTaxResult.value = taxFinalResult.toFixed(2);
+});
