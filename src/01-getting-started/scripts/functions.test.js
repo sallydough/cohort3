@@ -21,7 +21,7 @@ test('sum', () => {
     expect(functions.sum(2, 1)).toEqual(3);
 });
 //subtract function
-test ('subtract', () => {
+test('subtract', () => {
     expect(functions.subtract(2, 1)).toEqual(1);
     expect(functions.subtract(-10, -1)).toEqual(-9);
     expect(functions.subtract(0, "s")).toEqual(NaN);
@@ -50,5 +50,20 @@ test("federtaxbasket test", () => {
     expect(functions.CanadaFederalTax(147667)).toBe(30534.525); // 95259-147667 income range
     expect(functions.CanadaFederalTax(210371)).toBe(48718.685); // 147667-210371 income range
     expect(functions.CanadaFederalTax(210372)).toBe(48719.015); // >210371 income range 
+});
+
+//////////////Array////////////////////
+
+test("working with arrays", () => {
+    console.log("hello Working With Array World");
+    functions.hiArrayWorld();
+});
+
+test("Working with Arrays", () => {
+    expect(functions.add(5)).toBe("5 has been added to your array");
+    expect(functions.add("string")).toBe("The input is not a valid number");
+    expect(functions.show([6, 7, 8])).toBe("6,7,8");
+    expect(functions.total([20, 30, 10])).toBe(60);
+    expect(functions.clear()).toEqual([]);
 });
 
