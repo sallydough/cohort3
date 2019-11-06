@@ -16,6 +16,17 @@ const data = {
     prov: "Alberta"
 };
 
+//2019-11-06: "More Array Exercises: (Really)"
+test('mapfilter balance 1000', () => {
+    expect(functions.filterBalance1000(data.staff)[0]).toEqual(1000);
+    expect(functions.filterBalance1000(data.staff)[1]).toEqual(1330);
+    expect(functions.filterBalance1000(data.staff)).toEqual([1000,1330]);
+});
+
+
+
+
+
 //2019-OCT-29: "More Array Exercises"
 
 //loopStaffTotal:

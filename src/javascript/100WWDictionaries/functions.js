@@ -71,11 +71,5 @@ const functions = {
 };
 
 
-
-
-// const canProvince = {
-    
-//   };
-
 export default functions;
 export {canadianProvinces};

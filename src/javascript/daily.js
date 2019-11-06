@@ -4,7 +4,13 @@ import { isLogicalExpression } from "@babel/types";
 //let variable = ......
 
 const functions = {
-
+    // 2019-11-06 : "More Array Exercises (Really)" 
+    filterBalance1000: (array) => {
+     let filteredArray = array.filter(el => {
+         return el.balance >= 1000;
+     }); let mappedArray = filteredArray.map( el => el.balance );
+     return mappedArray;
+    },
 
 
     //2019-OCT-29: "More Array Exercises"
@@ -29,10 +35,10 @@ const functions = {
     //2019-OCT-25 : "loopStaff each / map"
 
     loopStaffForEach: (array) => {
-        let staffEmailArray=[];
+        let staffEmailArray = [];
         array.forEach(i => {
-        var newMEO = functions.makeEmailObj(i);
-        staffEmailArray.push(newMEO);
+            var newMEO = functions.makeEmailObj(i);
+            staffEmailArray.push(newMEO);
         }); return staffEmailArray;
     },
 
@@ -46,8 +52,8 @@ const functions = {
     //2019-OCT-24 : "loopStaff: in / of"
 
     loopStaffIn: (array) => {
-        let staffEmailArray=[];
-    
+        let staffEmailArray = [];
+
         for (z in array) {
             let staffInLoop = functions.makeEmailObj();
             staffEmailArray.push(staffInLoop);
@@ -56,7 +62,7 @@ const functions = {
     },
 
     // loopStaffOf: () => {
-        // let staffEmailArray=[];
+    // let staffEmailArray=[];
 
     // },
 
@@ -168,7 +174,7 @@ const functions = {
 
     doWhileFunction: (counterTwo) => {
         do {
-            console.log(counterTwo);
+            // console.log(counterTwo);
             counterTwo--;
         } while (counterTwo > 0);
         return counterTwo;
@@ -178,7 +184,7 @@ const functions = {
     countDown: (numberCountDown) => {
 
         while (numberCountDown > 0) {
-            console.log(numberCountDown);
+            // console.log(numberCountDown);
             numberCountDown--;
         }; return numberCountDown;
     },
@@ -214,7 +220,7 @@ const functions = {
         if (a === b) {
             return true;
         } else if (a !== b) {
-            console.log(a, b);
+            // console.log(a, b);
             return false;
         }
     },
