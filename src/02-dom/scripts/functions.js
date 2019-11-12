@@ -5,8 +5,7 @@ const functions = {
     },
 
     showButtonFunction: () => {
-        // return 0;
-        console.log(idBasicDOMLeft.children);
+       console.log(idBasicDOMLeft.children);
     },
 
     counter: 0,
