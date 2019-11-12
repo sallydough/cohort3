@@ -5,12 +5,21 @@ test("helloDOMWorld", () => {
     functions.helloDOMWorld();
 });
 
-// test("showButtonFunction", () => {
-//     console.log("hey DOM world from test.js");
-//     expect(functions.showButtonFunction()).toBe([li]);
-// });
+test("createCard Function", () => {
+    let mainDiv = document.createElement("div");
+    functions.createCard(mainDiv);
 
-test("helloDOMWorld", () => {
+
+
+
+
+
+
+
+
+
     console.log("hey DOM world from test.js");
-    functions.helloDOMWorld();
+    expect(functions.showButtonFunction()).toBe(1);
 });
+
+
