@@ -5,6 +5,32 @@ const functions = {
     },
 
     CanadaFederalTax: (income) => {
+        const basketTaxxRates = [ 0.15,       0.205,         0.26,          0.29,        0.33];
+     // const topIncomeRanges = [47630, 95259-47630, 147667-95259, 210371-147667,    Infinity];
+        const topIncomeRanges = [47630,       47629,        52408,         62704,    Infinity];
+
+        let totalTaxPayable= 0;
+        let currentBracket = 0;
+        let remainsToBeTaxed = income;
+
+        while (remainsToBeTaxed > 0) {
+            let currentChunkToBeTaxed;
+
+            if (remainsToBeTaxed > topIncomeRanges[currentBracket]) {
+                currentChunkToBeTaxed = topIncomeRanges[currentBracket];
+            } else {
+                currentChunkToBeTaxed = remainsToBeTaxed;
+            } 
+            let currentChunkOfTax = currentChunkToBeTaxed * basketTaxxRates[currentBracket];
+            remainsToBeTaxed = remainsToBeTaxed - currentChunkToBeTaxed;
+            totalTaxPayable = totalTaxPayable + currentChunkOfTax;
+            currentBracket = currentBracket + 1;
+            
+        }
+        return totalTaxPayable;
+    },
+
+    oldCanadaFederalTax: (income) => {
         const basketTaxRate1 = 0.15;
         const basketTaxRate2 = 0.205;
         const basketTaxRate3 = 0.26;

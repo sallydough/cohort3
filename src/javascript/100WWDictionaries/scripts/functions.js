@@ -24,6 +24,11 @@ const functions = {
 
     findProvinceSearch: provinceIDTextBox => {
       provinceIDCode = provinceIDTextBox.toLowerCase();
+      return canadianProvinces[provinceIDCode] || "Invalid Province Code"
+  },
+
+    oldfindProvinceSearch: provinceIDTextBox => {
+      provinceIDCode = provinceIDTextBox.toLowerCase();
       switch (provinceIDCode) {
         case "ab":
           provinceAnswer = canadianProvinces.ab;
