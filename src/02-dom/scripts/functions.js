@@ -13,12 +13,23 @@ const functions = {
     createCard: (parentDiv) => {
         functions.counter++;
         let newDiv = document.createElement("div");
-        newDiv.innerHTML = `<p> Card Number ${functions.counter} </p>
-        <button id="idAddBefore">Add Before</button>
-            <button id="idAddAfter">Add After</button>
-            <button id="idDelete">Delete</button>`;
+        newDiv.textContent = `Card Number ${functions.counter} `;
+        newDiv.id = `idCardNumber${functions.counter}`;
         newDiv.setAttribute("count", functions.counter);
-        newDiv.setAttribute("class", "cardFullArea");
+        newDiv.setAttribute("class", "cardFullArea");        
+        let addBefore = document.createElement("button");
+        let addAfter = document.createElement("button");
+        let  deleteBut = document.createElement("button");
+        newDiv.appendChild(addBefore);
+        newDiv.appendChild(addAfter);
+        newDiv.appendChild(deleteBut);
+        addBefore.id = `addBefore${functions.counter}`
+        addAfter.id = `addAfter${functions.counter}`
+        deleteBut.id = `deleteBut${functions.counter}`
+        addBefore.textContent = `Add Before`
+        addAfter.textContent = `Add After`
+        deleteBut.textContent = `delete`
+
         return newDiv;
     },
 
