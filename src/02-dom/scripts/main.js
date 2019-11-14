@@ -9,6 +9,7 @@ idBasicDOMLeft.addEventListener("click", () => {
     console.log(event.target);
 });
 
+//////////////////random//////////////
 // let count= 1;
 // idButtonAdd.addEventListener("click", () => {
 //     let newAddedList = document.createElement("li");
