@@ -2,7 +2,21 @@ import functions from './functions.js'
 
 idBasicDOMLeft.addEventListener("click", () => {
     console.log(event.target);
+    if(event.target.innerText == 'Add Before') {
+        console.log(event.target.parentElement);
+        let parentDiv = event.target.parentElement;
+        let newDiv = functions.createCard(parentDiv);
+        idBasicDOMLeft.insertBefore(newDiv, parentDiv);
+    } else if (event.target.innertext == "Add After") {
+        
+        // function next Sibling;
+    } else if (event.target.innertext == "delete") {
+        //funciton delete
+    }
 });
+
+
+
 
 idButtonShow.addEventListener("click", () => {
     console.log("show button clicked");
@@ -20,11 +34,14 @@ idButtonAdd.addEventListener("click", () => {
 
 idAddingFull.addEventListener("click", () => {
     let ultimateParentDiv = document.getElementById("idBasicDOMLeft");
-    let newAddedFull = functions.createCard(ultimateParentDiv);
-    // idBasicDOMLeft.appendChild(newAddedFull);
+    let newAddedFull = functions.createCard(ultimateParentDiv); 
+    idBasicDOMLeft.appendChild(newAddedFull);
 });
 
-// addbefore${functions.count}.
+// addbefore.addEventListener("click", () => {
+//     console.log("add before clicked");
+
+// });
 
 // addBefore.addEventListener("click", () => {
 //     console.log("idAddBefore button clicked");

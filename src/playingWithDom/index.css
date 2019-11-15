@@ -1,0 +1,10 @@
+.classMini {
+    border: dashed;
+    margin: 20px;
+    padding: 20px;
+    border-color: aqua;
+}
+
+.classParent {
+    border: solid;
+}

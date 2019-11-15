@@ -5,7 +5,7 @@ const functions = {
     },
 
     showButtonFunction: () => {
-       console.log(idBasicDOMLeft.children);
+       console.log(idBasicDOMLeft.childNodes);
     },
 
     counter: 0,
@@ -17,7 +17,7 @@ const functions = {
         newDiv.id = `idCardNumber${functions.counter}`;
         newDiv.setAttribute("count", functions.counter);
         newDiv.setAttribute("class", "cardFullArea");   
-        parentDiv.appendChild(newDiv);
+        // parentDiv.appendChild(newDiv);
         let addBefore = document.createElement("button");
         let addAfter = document.createElement("button");
         let  deleteBut = document.createElement("button");
