@@ -9,10 +9,8 @@
     width: 600px;
     height: 500px;
     height: auto;
-
     padding: 20px;
     background-color: rgb(250, 217, 186);
-   
 }
 
 .rightCards {
@@ -23,7 +21,6 @@
     padding: 20px;
     margin: 20px;;
     margin-right: 30px;
-    
     background-color: rgb(141, 145, 206);
     text-align: center;
 }
@@ -33,5 +30,12 @@
     padding: 20px;
     border: dashed;
     margin-bottom: 20px;
+}
 
+.DOM {
+    background-color: rgb(241, 190, 224);
+}
+body {
+    background-color: rgb(163, 42, 42);
+    background-image: ;
 }

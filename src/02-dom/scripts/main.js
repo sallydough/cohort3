@@ -19,18 +19,21 @@ idButtonAdd.addEventListener("click", () => {
 });
 
 idAddingFull.addEventListener("click", () => {
-    let newAddedFull = functions.createCard();
-    idBasicDOMLeft.appendChild(newAddedFull);
+    let ultimateParentDiv = document.getElementById("idBasicDOMLeft");
+    let newAddedFull = functions.createCard(ultimateParentDiv);
+    // idBasicDOMLeft.appendChild(newAddedFull);
 });
 
-addBefore.addEventListener("click", () => {
-    console.log("idAddBefore button clicked");
-})
+// addbefore${functions.count}.
 
-idAddAfter.addEventListener("click", () => {
-    console.log("idAddAfter button clicked");
-})
+// addBefore.addEventListener("click", () => {
+//     console.log("idAddBefore button clicked");
+// })
 
-idDelete.addEventListener("click", () => {
-    console.log("idDelete button clicked");
-})
+// idAddAfter.addEventListener("click", () => {
+//     console.log("idAddAfter button clicked");
+// })
+
+// idDelete.addEventListener("click", () => {
+//     console.log("idDelete button clicked");
+// })
