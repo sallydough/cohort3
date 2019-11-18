@@ -8,7 +8,10 @@ idBasicDOMLeft.addEventListener("click", () => {
         let newDiv = functions.createCard(parentDiv);
         idBasicDOMLeft.insertBefore(newDiv, parentDiv);
     } else if (event.target.innertext == "Add After") {
-        
+        console.log(event.target.parentElement.nextSibling);
+        let parentDivv = event.target.ParentElement.nextSibling
+        let newDiv = functions.createCard(parentDivv);
+        idBasicDOMLeft.insertBefore(newDiv, parentDivv);
         // function next Sibling;
     } else if (event.target.innertext == "delete") {
         //funciton delete
