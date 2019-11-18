@@ -14,8 +14,8 @@ const functions = {
         let newDiv = document.createElement("div");
         newDiv.textContent = `Card Number ${functions.counter} `;
         newDiv.id = `idCardNumber${functions.counter}`;
-        // newDiv.setAttribute("group", functions.counter);
-        newDiv.setAttribute("class", "cardFullArea");   
+        newDiv.setAttribute("class", "cardFullArea");  
+        newDiv.setAttribute("key", functions.counter); 
         // parentDiv.appendChild(newDiv);
         let addBefore = document.createElement("button");
         let addAfter = document.createElement("button");

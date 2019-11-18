@@ -32,3 +32,4 @@ idButtonAdd.addEventListener("click", () => {
     newAddedList.setAttribute("count", count++);
     newAddedList.setAttribute("class", "cardArea");
 });
+
