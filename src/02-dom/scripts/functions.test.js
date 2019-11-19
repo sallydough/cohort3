@@ -5,23 +5,23 @@ test("helloDOMWorld", () => {
     functions.helloDOMWorld();
 });
 
-let count = 1;
+let count = 0;
 test("createCard Function", () => {
+    count++;
     let mainDiv = document.createElement("div");
-    // mainDiv.setAttribute("key", count++);
     let newDiv = functions.createCard(mainDiv);
-    newDiv.setAttribute("key", count++)
+    newDiv.setAttribute("key", count);
     mainDiv.appendChild(newDiv);
-    expect(mainDiv.getAttribute("key")).toEqual("1");
+    expect(mainDiv.children[0].getAttribute("key")).toBe("1");
     functions.createCard(mainDiv);
-    expect(mainDiv.getAttribute("key")).toEqual("2");
+    expect(mainDiv.children[1].getAttribute("key")).toBe("2");
+    functions.createCard(mainDiv);
+    expect(mainDiv.children[2].getAttribute("key")).toBe("3");
 });
 
 
 
-// 1. Create parent div
-// ==== Process function createCard
-// ==== So if count is 1, 2, 3,
+
 // 2. Div.child[0] addBefore//addAfter testing
 
 // test("createCard Function", () => {

@@ -16,7 +16,7 @@ const functions = {
         newDiv.id = `idCardNumber${functions.counter}`;
         newDiv.setAttribute("class", "cardFullArea");  
         newDiv.setAttribute("key", functions.counter); 
-        // parentDiv.appendChild(newDiv);
+        parentDiv.appendChild(newDiv);
         let addBefore = document.createElement("button");
         let addAfter = document.createElement("button");
         let  deleteBut = document.createElement("button");
