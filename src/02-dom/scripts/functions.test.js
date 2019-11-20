@@ -16,10 +16,15 @@ test("createCard Function", () => {
     functions.createCard(mainDiv);
     expect(mainDiv.children[1].getAttribute("key")).toBe("2");
     functions.createCard(mainDiv);
+    console.log(newDiv["key"])
     expect(mainDiv.children[2].getAttribute("key")).toBe("3");
 });
 
+test("addBeforeButton", () => {
+    let count = 0;
+    let countArray = [];
 
+})
 
 
 // 2. Div.child[0] addBefore//addAfter testing
