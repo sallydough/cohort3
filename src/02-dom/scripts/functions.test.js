@@ -13,18 +13,78 @@ test("createCard Function", () => {
     newDiv.setAttribute("key", count);
     mainDiv.appendChild(newDiv);
     expect(mainDiv.children[0].getAttribute("key")).toBe("1");
-    functions.createCard(mainDiv);
+    mainDiv.appendChild(functions.createCard(mainDiv));
     expect(mainDiv.children[1].getAttribute("key")).toBe("2");
-    functions.createCard(mainDiv);
-    console.log(newDiv["key"])
+    mainDiv.appendChild(functions.createCard(mainDiv));
+    expect(mainDiv.children[2].getAttribute("key")).toBe("3");
+});
+    
+test("addBeforeFunction", () => {
+    let count = 0;
+    count++;
+    console.log(count);
+    let mainDiv = document.createElement("div");
+    mainDiv.id = "idMainDiv";
+    let newDiv = functions.createCard(mainDiv);
+    newDiv.setAttribute("key", count);
+    mainDiv.appendChild(newDiv);
+    document.body.appendChild(mainDiv);
+    expect(mainDiv.children[0].getAttribute("key")).toBe("1");
+    console.log(count);
+    functions.addBeforeButton(newDiv, idMainDiv);
+    console.log(count);
+    expect(mainDiv.children[0].getAttribute("key")).toBe("2");
+    expect(mainDiv.children[1].getAttribute("key")).toBe("1");
+    functions.addBeforeButton(newDiv, idMainDiv);
+    expect(mainDiv.children[0].getAttribute("key")).toBe("2");
+    expect(mainDiv.children[1].getAttribute("key")).toBe("3");
+    expect(mainDiv.children[2].getAttribute("key")).toBe("1");
+});
+
+test("addAfterFunction", () => {
+    count = 0;
+    count++;
+    console.log(count);
+    let mainDiv = document.createElement("div");
+    mainDiv.id = "idMainDiv";
+    let newDiv = functions.createCard(mainDiv);
+    newDiv.setAttribute("key", count);
+    mainDiv.appendChild(newDiv);
+    document.body.appendChild(mainDiv);
+    expect(mainDiv.children[0].getAttribute("key")).toBe("1");
+    console.log(count);
+    functions.addAfterButton(newDiv.nextSibling, idMainDiv);
+    console.log(count);
+    expect(mainDiv.children[0].getAttribute("key")).toBe("1");
+    expect(mainDiv.children[1].getAttribute("key")).toBe("2");
+    functions.addAfterButton(newDiv.nextSibling, idMainDiv);
+    expect(mainDiv.children[0].getAttribute("key")).toBe("1");
+    expect(mainDiv.children[1].getAttribute("key")).toBe("2");
     expect(mainDiv.children[2].getAttribute("key")).toBe("3");
 });
 
-test("addBeforeButton", () => {
-    let count = 0;
-    let countArray = [];
+// test("deleteButton", () => {
+//     count = 0;
+//     count++;
+//     console.log(count);
+//     let mainDiv = document.createElement("div");
+//     mainDiv.id = "idMainDiv";
+//     let newDiv = functions.createCard(mainDiv);
+//     newDiv.setAttribute("key", count);
+//     mainDiv.appendChild(newDiv);
+//     document.body.appendChild(mainDiv);
+//     expect(mainDiv.children[0].getAttribute("key")).toBe("1");
+//     console.log(count);
+//     functions.deleteButton(newDiv, idMainDiv);
+//     console.log(count);
+//     expect(mainDiv.children[0].getAttribute("key")).toBe("null");
+//     // expect(mainDiv.children[1].getAttribute("key")).toBe("1");
+//     // functions.addAfterButton(newDiv, idMainDiv);
+//     // expect(mainDiv.children[0].getAttribute("key")).toBe("2");
+//     // expect(mainDiv.children[1].getAttribute("key")).toBe("3");
+//     // expect(mainDiv.children[2].getAttribute("key")).toBe("0");
+// });
 
-})
 
 
 // 2. Div.child[0] addBefore//addAfter testing
