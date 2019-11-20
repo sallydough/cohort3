@@ -46,8 +46,8 @@ const functions = {
         idBasicDOMLeft.insertBefore(newDiv, parentDiv);
     },
 
-    deleteButton: (parentDiv) => {
-        let DelDiv = event.target.parentNode;
+    deleteButton: (target) => {
+        let DelDiv = target.parentNode;
         DelDiv.remove();
     },
 

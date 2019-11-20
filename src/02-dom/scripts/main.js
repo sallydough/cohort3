@@ -15,7 +15,7 @@ idBasicDOMLeft.addEventListener("click", () => {
         let parentDivv = event.target.parentElement.nextSibling;
         functions.addAfterButton(parentDivv, idBasicDOMLeft);
     } else if (event.target.name == "deleteBut") {
-        functions.deleteButton();
+        functions.deleteButton(event.target);
     }
 });
 
