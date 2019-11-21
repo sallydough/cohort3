@@ -6,8 +6,9 @@ const functions = {
 
     counter: 0,
 
-    // createItem: () => {},
-
+   counterReset: () => {
+   functions.counter = 0;
+   },
 
     createCard: (parentDiv) => {
         functions.counter++;

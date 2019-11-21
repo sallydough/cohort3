@@ -6,11 +6,11 @@ test("helloDOMWorld", () => {
 });
 
 test("createCard Function", () => {
-    let count = 0;
-    count++;
+    functions.counterReset();
+    
     let mainDiv = document.createElement("div");
     let newDiv = functions.createCard(mainDiv);
-    newDiv.setAttribute("key", count);
+    newDiv.setAttribute("key", functions.counter);
     mainDiv.appendChild(newDiv);
     expect(mainDiv.children[0].getAttribute("key")).toBe("1");
     mainDiv.appendChild(functions.createCard(mainDiv));
@@ -20,66 +20,68 @@ test("createCard Function", () => {
 });
     
 test("addBeforeFunction", () => {
-    let count = 0;
-    count++;
-    console.log(count);
+    functions.counterReset();
+    
+   
     let idMainDiv = document.createElement("div");
     idMainDiv.id = "idMainDiv";
     // let idMainDiv = document.getElementById("idMainDiv")
     let newDiv = functions.createCard(idMainDiv);
-    newDiv.setAttribute("key", count);
+    newDiv.setAttribute("key", functions.counter);
     idMainDiv.appendChild(newDiv);
     // document.body.appendChild(mainDiv);
     expect(idMainDiv.children[0].getAttribute("key")).toBe("1");
-    console.log(count);
+    // console.log(count);
     functions.addBeforeButton(newDiv, idMainDiv);
-    console.log(count);
+    // console.log(count);
     expect(idMainDiv.children[0].getAttribute("key")).toBe("2");
     expect(idMainDiv.children[1].getAttribute("key")).toBe("1");
     functions.addBeforeButton(newDiv, idMainDiv);
+    // console.log(count);
+    console.log(idMainDiv.children[0])
     expect(idMainDiv.children[0].getAttribute("key")).toBe("2");
     expect(idMainDiv.children[1].getAttribute("key")).toBe("3");
     expect(idMainDiv.children[2].getAttribute("key")).toBe("1");
 });
 
 test("addAfterFunction", () => {
-    let count = 0;
-    count++;
-    console.log(count);
-    let mainDiv = document.createElement("div");
-    mainDiv.id = "idMainDiv";
-    let newDiv = functions.createCard(mainDiv);
-    newDiv.setAttribute("key", count);
-    mainDiv.appendChild(newDiv);
+    functions.counterReset();
+
+    // console.log(count);
+    let idMainDiv = document.createElement("div");
+    idMainDiv.id = "idMainDiv";
+    let newDiv = functions.createCard(idMainDiv);
+    newDiv.setAttribute("key", functions.counter);
+    idMainDiv.appendChild(newDiv);
     // document.body.appendChild(mainDiv);
-    expect(mainDiv.children[0].getAttribute("key")).toBe("1");
-    console.log(count);
+    expect(idMainDiv.children[0].getAttribute("key")).toBe("1");
+    // console.log(count);
     functions.addAfterButton(newDiv.nextSibling, idMainDiv);
-    console.log(count);
-    expect(mainDiv.children[0].getAttribute("key")).toBe("1");
-    expect(mainDiv.children[1].getAttribute("key")).toBe("2");
+    // console.log(count);
+    expect(idMainDiv.children[0].getAttribute("key")).toBe("1");
+    expect(idMainDiv.children[1].getAttribute("key")).toBe("2");
     functions.addAfterButton(newDiv.nextSibling, idMainDiv);
-    expect(mainDiv.children[0].getAttribute("key")).toBe("1");
-    expect(mainDiv.children[1].getAttribute("key")).toBe("3");
-    expect(mainDiv.children[2].getAttribute("key")).toBe("2");
+    expect(idMainDiv.children[0].getAttribute("key")).toBe("1");
+    expect(idMainDiv.children[1].getAttribute("key")).toBe("3");
+    expect(idMainDiv.children[2].getAttribute("key")).toBe("2");
 });
 
 test("deleteButton", () => {
-    let count = 0;
-    count++;
-    console.log(count);
+    functions.counterReset();
+
+    // console.log(count);
     let mainDiv = document.createElement("div");
     mainDiv.id = "idMainDiv";
     let newDiv = functions.createCard(mainDiv);
-    newDiv.setAttribute("key", count);
+    newDiv.setAttribute("key", functions.counter );
     mainDiv.appendChild(newDiv);
     let delButtton = document.createElement("bottom");
     newDiv.appendChild(delButtton);
-    // document.body.appendChild(mainDiv);
+    // document.body.appendChild(idMainDiv);
     expect(mainDiv.children[0].getAttribute("key")).toBe("1");
-    console.log(count);
+    // console.log(count);
     functions.deleteButton(delButtton);
-    console.log(count);
+    // console.log(count);
     expect(mainDiv.children.length).toEqual(0);
 });
 
