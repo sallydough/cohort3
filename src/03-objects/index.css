@@ -1,0 +1,43 @@
+
+#idCompany {
+    color: darkblue;
+    background-color: yellow;
+    text-align: right;
+    text-shadow: darkblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
+
+
+
+#idAccountList {
+    float: left;
+    border: solid;
+    margin: 30px;
+    padding: 100px;
+}
+
+
+#idSelectedAccount {
+    float:right;
+    border: dashed;
+    padding: 50px;
+    margin: 30px;
+    
+}
+
+#idSelectAccLeft {
+    float: left;
+}
+
+#idSelectAccRight {
+    float: right;
+    border-left: dashed;
+    padding: 20px;
+}
+
+#idAccountRegister {
+    border: dotted;
+    padding: 20px
+    margin: 30px;
+}

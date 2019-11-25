@@ -1,5 +1,4 @@
 import {Person, functions} from './oostuff.js'
-import { exportAllDeclaration } from '@babel/types';
 // import * as oo from './oostuff.js'
 
 test("hello world", () => {

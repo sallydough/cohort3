@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Objects</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div>
+        <div id="idCompany">
+            <h1>BANK OF SALLY DOUGH BRO ™</h1>
+        </div>
+        <div id="idAccountRegister">
+            Client Name:
+            <br>Account Type: <select name="accounts" id="idAccountType">
+                <option value="Checking">Checking</option>
+                <option value="save">Savings</option>
+                <option value="tfsa">TSFA</option>
+                <option value="edu">Education</option>
+            </select>
+            <br>Deposit: <input type="text">
+            <br>
+            <br><button id="idAddAcount">Add Account</button>
+        </div>
+
+        <div id="idAccountList">
+            <li>Anita Do</li>
+            <li>Kevin Do</li>
+            <li>Sally Do</li>
+        </div>
+        <div id="idSelectedAccount" class>
+            <div>
+                <h1>Anita Do -----------------------Total:<input id="idTotalBalance" type="text" placeholder="Total Balance"></h1>
+            </div>
+            <div id="idSelectAccLeft">
+                <button>Show All Accounts</button><br>
+                <button>Overall Total</button><br>
+                <button>Delete Account</button><br>
+                <select>
+                    <option value="check">Checkings</option>
+                    <option value="save">Savings</option>
+                    <option value="tfsa">TSFA</option>
+                    <option value="edu">Education</option>
+                </select>
+            </div>
+            <div id="idSelectAccRight">
+                <h1>Checkings:<input id="idCurrentBalance" type="text" placeholder="Current Balance"></h1><br>
+                <br>
+                <br>
+
+                <input id="idDepWith" type="text" placeholder="Deposit or Withdraw">
+                <button>Deposit</button>
+                <button>Withdraw</button>
+                <button>Delete Account</button>
+                <div id="idNewBalance">New Balance: $$$$$$$$ </div>
+            
+            
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script type="module" src="03-objects/index.js"></script>
+</body>
+
+</html>
