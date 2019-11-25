@@ -1,26 +1,51 @@
 
 #idCompany {
-    color: darkblue;
-    background-color: yellow;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: yellow;
+    background-color: darkblue;
     text-align: right;
-    text-shadow: darkblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: x-large;
+    font-size: xx-large;
+    
 }
 
-
+#idAccountRegister {
+    background-color: red;
+    color: yellow;
+    border: solid 10px;
+    padding: 30px;
+    margin: 30px;
+}
 
 #idAccountList {
+    background-color: rgb(30, 255, 0);
+    color: darkblue;
+    list-style: none;
     float: left;
-    border: solid;
+    border: solid 15px;
+    border-color: darkblue;
     margin: 30px;
-    padding: 100px;
+    padding: 50px;
+
+}
+#idSally, #idAnita, #idKevin {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: dashed 5px;
+    color: rgb(34, 0, 128);
+    list-style: none;
+
 }
 
-
 #idSelectedAccount {
+    background-color: palevioletred;
+    color: rgb(10, 10, 85);
     float:right;
-    border: dashed;
+    border: dashed 7px rgb(53, 100, 155);
     padding: 50px;
     margin: 30px;
     
@@ -34,10 +59,4 @@
     float: right;
     border-left: dashed;
     padding: 20px;
-}
-
-#idAccountRegister {
-    border: dotted;
-    padding: 20px
-    margin: 30px;
 }
