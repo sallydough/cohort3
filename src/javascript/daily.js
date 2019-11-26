@@ -1,9 +1,27 @@
-import { isLogicalExpression } from "@babel/types";
+
 
 // const varName = .....
 //let variable = ......
 
 const functions = {
+
+    //2019-11-28: Deconstructing Arrays and Objects
+    deconstructingArrObj: (arr) => {
+    let array = ["Gluteous", "Maximus"]
+
+    // destructuring assignment
+    // sets firstTerm = bodyParts[0]
+    // and lastTerm = bodyParts[1]
+    let [firstTerm , lastTerm] = arr;
+    return firstTerm + lastTerm;
+
+
+
+
+
+
+    },
+
     // 2019-11-06 : "More Array Exercises (Really)" 
     filterBalance1000: (array) => {
      let filteredArray = array.filter(el => {

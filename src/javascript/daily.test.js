@@ -1,5 +1,17 @@
 import functions from "./daily"
 
+//2019-11-28: Deconstructing Arrays and Objects
+
+test("DestructingArrObj", () => {
+    let bodyPartss = ["Corpus", "Callosum"]
+    // let result = functions.deconstructingArrObj(bodyPartss);
+    expect(functions.deconstructingArrObj(bodyPartss)).toBe("CorpusCallosum");
+    
+});
+
+
+
+
 
 const data = {
     staff: [

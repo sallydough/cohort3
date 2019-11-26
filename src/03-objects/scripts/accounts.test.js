@@ -11,7 +11,7 @@ test("consoleTest", () => {
 
 test( "Accounts - withdraw, deposit, balance", () => {
     const newAccount = new Account ("checkingsAccount", 100);
-    // balance test (state)
+    // ccheckbalance test (state)
     expect(newAccount.checkBalance()).toEqual(100);
     // withdraw test (-=)
     newAccount.withdraw(75);

@@ -15,9 +15,9 @@
 #idAccountRegister {
     background-color: red;
     color: yellow;
-    border: solid 10px;
+    border: solid 20px;
     padding: 30px;
-    margin: 30px;
+    margin: 20px;
 }
 
 #idAccountList {
@@ -39,6 +39,10 @@
     color: rgb(34, 0, 128);
     list-style: none;
 
+}
+
+#idAnita {
+    background-color: palevioletred;
 }
 
 #idSelectedAccount {
