@@ -1,4 +1,4 @@
-import { Account, functions } from "./accounts.js"
+import { Account, functions, AccountController } from "./accounts.js"
 
 
 
@@ -22,3 +22,11 @@ test( "Accounts - withdraw, deposit, balance", () => {
 });
 
 //////////////////////////130C//////////////////////////
+
+// test
+// const controller = new AccountController( name, accountNAME)
+// CREATEACOUNT IQ
+//IMPLEMENT 5 METHODS
+// EXPECT
+
+

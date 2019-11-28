@@ -47,7 +47,8 @@ class AccountController {
         const highestAcc = Math.max(...balanceArr);
         return highestAcc;
     }
-    lowestAccount() {const balanceArr = this.allTotalAccounts.map(each => each.balance);
+    lowestAccount() {
+        const balanceArr = this.allTotalAccounts.map(each => each.balance);
         const lowestAcc = Math.min(...balanceArr);
         return lowestAcc; 
     }
