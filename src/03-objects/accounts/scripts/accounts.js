@@ -4,6 +4,19 @@ const functions = {
 
     helloObjects: () => {
         console.log("hello from functions.js");
+    },
+
+    counter: 0,
+
+    createdAccount: (accountName, startingBalance) => {
+        counter++;
+        let createAccount = document.createElement("div");
+        const accountIdName = document.createElement("input");
+        const accountIdType = document.createElement("input");
+        const accountIdStartBal = document.createElement("input");
+        createAccount.id = `idAccountNumber${counter}`
+        createAccount
+
     }
 }
 
