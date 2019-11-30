@@ -9,83 +9,47 @@
 
 <body>
 
-    <div>
+    <div id="idBody">
         <div id="idCompany">
             <h1>$ECURE THE BAG ™</h1>
         </div>
         <div id="idAccountRegister">
-            <p>Client Name: <input type="text" placeholder="Full Name"></p>
-            <p>Account Type: <select name="accounts" id="idAccountType">
-                <option value="Checking">Checking</option>
-                <option value="save">Savings</option>
-                <option value="tfsa">TSFA</option>
-                <option value="edu">Education</option></select></p>
-            </select>
-            <p>Deposit: <input type="text" placeholder="Amount"></p>
+            <p>Client Name: <input type="text" id="idClientName"placeholder="Full Name"></p>
+            <p>Account Type: <input type="text" id="idAccountType" placeholder="Type"></p>
+            <p>Deposit: <input type="text" id="idStartDeposit" placeholder="Amount"></p>
             <br>
             <br><button id="idAddAcount">Add Account</button>
         </div>
+        <div id= "idHighestAccount"> Highest Account Balance:<br><br><button>Highest</button></div>
+        <div id= "idLowestAccount">Lowest Account Balance:<br><br><button>Lowest</button></div>
+        <div id="idOverallSumBalance">Total Account Balances:<br><br><button>Total</button></div>
 
-        <div id="idAccountList">
-            <h1>Account List:</h1>
-            <div id="idAnita"><li>ANITA DO <button>X</button><br></li></div>
-            <div id="idSally"><li>KEVIN DO <button>X</button><br></li></div>
-            <div id="idKevin"><li>SALLY DO <button>X</button><br></li></div>
+        <div id="idAccountList">  
+            <h1>CLIENT #123:</h1>
+            <div id="idAnita">
+                <li>RENT: $1500 <button>X</button><br></li>
+            </div>
         </div>
         <div id="idSelectedAccount" class>
             <div>
-                <h1>ANITA DO -----------------------TOTAL:<input id="idTotalBalance" type="text" placeholder="Total Balance"></h1>
-            </div>
-            <div id="idSelectAccLeft">
-                <select>
-                    <option value="check">Checkings</option>
-                    <option value="save">Savings</option>
-                    <option value="tfsa">TSFA</option>
-                    <option value="edu">Education</option>
-                </select><br>
-                <button>Show All Accounts</button><br>
-                <button>Overall Total</button><br>
-                <button>Add New Account</button><br>
-                <button>Highest Balance Account</button><br>
-                <button>Lowest Balance Account</button><br>
-                <button>Delete Account</button><br>
+                <h1> RENT-----------------------<input id="idTotalBalance" type="text"
+                        placeholder="Total Balance"></h1>
             </div>
             <div id="idSelectAccRight">
-                <h1>Checkings:<input id="idCurrentBalance" type="text" placeholder="Current Balance"></h1><br>
-                <br>
-                <br>
 
                 <input id="idDepWith" type="text" placeholder="Deposit or Withdraw">
                 <button>Deposit</button>
                 <button>Withdraw</button>
                 <button>Delete Account</button>
                 <div id="idNewBalance">New Balance: $$$$$$$$ </div>
-            
-            
+
+
             </div>
         </div>
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </div>
 
-
-
-
-    <script type="module" src="03-objects/index.js"></script>
+    <script type="module" src="scripts/index.js"></script>
 </body>
 
 </html>

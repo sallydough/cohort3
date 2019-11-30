@@ -13,15 +13,18 @@
 }
 
 #idAccountRegister {
+    float: left;
     background-color: red;
     color: yellow;
     border: solid 20px;
     padding: 30px;
-    margin: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: right;
 }
 
 #idAccountList {
-    background-color: rgb(30, 255, 0);
+    background-color: rgb(138, 110, 165);
     color: darkblue;
     list-style: none;
     float: left;
@@ -29,15 +32,33 @@
     border-color: darkblue;
     margin: 30px;
     padding: 50px;
-
 }
-#idSally, #idAnita, #idKevin {
+
+#idHighestAccount, #idLowestAccount, #idOverallSumBalance {
+    float: left;
+    background-color:  rgb(231, 115, 61);
+    color: rgb(226, 222, 1);
+    border: solid 20px  rgb(120, 134, 90);
+    padding: 30px;
+    margin: 20px;
+    height: 175px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large ;
+    
+}
+
+
+
+#idAnita, .newAccount {
     text-align: center;
     margin: 10px;
     padding: 10px;
     border: dashed 5px;
     color: rgb(34, 0, 128);
     list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+    
 
 }
 
@@ -55,12 +76,12 @@
     
 }
 
-#idSelectAccLeft {
-    float: left;
-}
 
 #idSelectAccRight {
-    float: right;
     border-left: dashed;
     padding: 20px;
+}
+
+body {
+    background-color: rgb(199, 208, 212);
 }

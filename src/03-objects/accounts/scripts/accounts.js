@@ -8,16 +8,34 @@ const functions = {
 
     counter: 0,
 
-    createdAccount: (accountName, startingBalance) => {
-        counter++;
-        let createAccount = document.createElement("div");
-        const accountIdName = document.createElement("input");
-        const accountIdType = document.createElement("input");
-        const accountIdStartBal = document.createElement("input");
-        createAccount.id = `idAccountNumber${counter}`
-        createAccount
+    // create New Acount:
+    createdAccount: (accountList) => {
+        functions.counter++;
+        let newAccount = document.createElement("div");
+        const accountIdType = document.getElementById("idAccountType").value;
+        const accountIdStartBal = document.getElementById("idStartDeposit").value;
+        newAccount.textContent = `${accountIdType.toUpperCase()} :  $${accountIdStartBal}`
+        newAccount.id = `idAccountNumber${functions.counter}`
+        newAccount.setAttribute("class", "newAccount");
+        let deleteAccount = document.createElement("button");
+        deleteAccount.id = `deleteAccount`;
+        deleteAccount.textContent = `X`
+        deleteAccount.setAttribute("name", "deleteBut");
+        newAccount.appendChild(deleteAccount);
+        accountList.appendChild(newAccount);
+        // const accountIdName = document.getElementById("input");
+        // accountTypedName = document.getElementById
+        // accountIdName.id = `${accountIdName}`
+        // newAccount.appendChild(accountIdName);
+        // newAccount.appendChild(accountIdType.value);
+        // newAccount.appendChild(accountIdStartBal.value);
+        return newAccount;
+    },
 
-    }
+    deleteBut: (target) => {
+        let DelAcc = target.parentNode;
+        DelAcc.remove();
+    },
 }
 
 class Account {
