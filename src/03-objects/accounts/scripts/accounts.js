@@ -59,21 +59,21 @@ class AccountController {
     constructor() {
         this.allTotalAccounts = [];
     }
-    addNewAcccount(accountName, startingBalance) {
+    addNewAccount(accountName, startingBalance) {
         const newSubAccount = new Account(accountName, startingBalance)
         this.allTotalAccounts.push(newSubAccount);
     }
     removeAccount(selectedAccountInArray) {
         this.allTotalAccounts.splice(selectedAccountInArray, 1);
-     }
+    }
     sumTotalBalance() {
         let sumTotalBal = 0;
         for (const eachAccount of this.allTotalAccounts) {
             sumTotalBal += eachAccount.balance;
         }
         return sumTotalBal;
-     }
-    highestAccount() { 
+    }
+    highestAccount() {
         const balanceArr = this.allTotalAccounts.map(each => each.balance);
         const highestAcc = Math.max(...balanceArr);
         return highestAcc;
@@ -81,7 +81,7 @@ class AccountController {
     lowestAccount() {
         const balanceArr = this.allTotalAccounts.map(each => each.balance);
         const lowestAcc = Math.min(...balanceArr);
-        return lowestAcc; 
+        return lowestAcc;
     }
 
 }
