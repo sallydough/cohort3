@@ -63,6 +63,7 @@ class Community {
     }
 
     deleteCity(deletedCity) {
+        this.cities = this.cities.filter((e) => e.name != deletedCity);
         // delete this.byName[name];
         // this.message = `${name} has been deleted from your list.`
         // this.cities.forEach((key, index) => {
@@ -70,7 +71,6 @@ class Community {
         //         this.cities.splice(index, 1);
         //     }
         // });
-        this.cities = this.cities.filter((e) => e.name != deletedCity);
     }
 
     getMostNorthern() {
@@ -97,6 +97,41 @@ class Community {
         const totalCityPopulation = cityArray.reduce((actual, current) => actual + current);
         return totalCityPopulation;
     }
+
+    // loadCitiesServer (serverData) {
+    //     serverData.map(city => {
+    //         this.createCity(city.key, city.name, city.latitude, city.longitude, city.population);
+    //     });
+    //     this.message =  `Cities below have been loaded from the server.`
+    //     return this.cities;
+    // }
+    // checkCityExists (latitude, longitude) {
+    //     let checkExist = false;
+    //     if (this.cities.length >= 1) {
+    //         this.cities.forEach(city => {
+    //             if (city.latitude === latitude && city.longitude === longitude) {
+    //                 checkExist = true;
+    //             };
+    //         });
+    //     };
+    //     return checkExist;
+    // }
+    // populationControl (cityObj, change, amount) {
+
+    //     if (change === 'moveOut') {
+    //         this.message = 'City population has been updated.';
+    //         return cityObj.movedOut(amount)
+    //     }
+    //     this.message = 'City population has been updated.';
+    //     return cityObj.movedIn(amount);
+    // }
+    
+
+
+
+
+
+
 }
 
 export { functions, City, Community };

@@ -20,9 +20,24 @@ const idBody = document.getElementById("idBody");
 
 idBody.addEventListener("click", () => {
     console.log(event.target);
+    // 'delete from Account List' button:
     if (event.target.name == "deleteBut") {
         functions.deleteBut(event.target, counter);
     }
 });
 
-//Delete Selected Account:
+//deposit:
+// -take input value
+//-cycle through array in object, find balance, update >>
+// -add it to current array balance
+//-return new balance
+//-update current balance to new balance
+
+//withdraw:
+// -take input value
+//-cycle through array in object, find balance, update >>
+// -subtract it to current array balance
+//-return new balance
+//-update current balance to new balance
+
+
