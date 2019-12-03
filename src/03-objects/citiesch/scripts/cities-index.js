@@ -90,4 +90,4 @@ const cityChecker = (array) => {
 idCreateCityButton.addEventListener("click", cityCreateButton);
 idCityDisplay.addEventListener("click", cityButtonSelector);
 window.addEventListener("click", cityInfoSelector);
-window.addEventListener("load", syncFunctions.dataSync(communities, idCityDisplay), cityChecker(communities.cities));
+window.addEventListener("load", syncFunctions.dataSync(communities, idCityDisplay), cityChecker(communities.cities)); //this will run when page loads

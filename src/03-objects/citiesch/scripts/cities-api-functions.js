@@ -3,17 +3,17 @@ import domFunctions from './cities-dom.js';
 
 const syncFunctions = {
 
-    async dataSync(array, parent) {
-        let data = await postData(url + 'all');
+    async dataSync(array, parent) { //this is the only function that has to do with te server out of top three
+        let data = await postData(url + 'all');  //async used so that it waits for the 'await' fetch info to come in before carrying out the function
         for (let i = 0; i < data.length; i++) {
             let new_city = new City(data[i].key, data[i].name, data[i].latitude, data[i].longitude, data[i].population);
             array.cities.push(new_city);
         } syncFunctions.counterSync(array);
-        syncFunctions.domSync(array, parent);
+        syncFunctions.domSync(array, parent); //take community array and pushes into DOM functions - actually shows cards on website
         return array;
     },
 
-    counterSync(array) {
+    counterSync(array) { //looks at highest counter and continues to make key from than with json info
         let arrayKeys = array.cities.map(city => city.key);
         if (arrayKeys.length > 0) {
             let highestKey = Math.max(...arrayKeys);
@@ -23,7 +23,7 @@ const syncFunctions = {
 
     domSync(array, parent) {
         array.cities.forEach(city => {
-            domFunctions.createCityDiv(parent, city);
+            domFunctions.createCityDiv(parent, city); //for every city in array, make a card for it
         })
     },
 
@@ -46,7 +46,7 @@ const syncFunctions = {
         return data;
     },
 
-    async populationSync(city) {
+    async populationSync(city) {  //moved in and out
         let data = await postData(url + 'update', city);
         data = await postData(url + 'all');
         return data;
