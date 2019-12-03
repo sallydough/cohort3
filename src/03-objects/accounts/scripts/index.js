@@ -15,6 +15,12 @@ idAddAcount.addEventListener("click", () => {
     idAccountList.appendChild(newAddedAccount);
 });
 
+//shows added accounts as children objects:
+idShowChilds.addEventListener("click", () => {
+    console.log("show button clicked");
+    functions.showButtonFunction();
+});
+
 // Console log event target
 const idBody = document.getElementById("idBody");
 

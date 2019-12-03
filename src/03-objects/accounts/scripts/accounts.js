@@ -6,6 +6,10 @@ const functions = {
         console.log("hello from functions.js");
     },
 
+    showButtonFunction: (parentdiv) => {
+        console.log(idAccountList.childNodes);
+     },
+
     counter: 0,
 
     // create New Acount:
