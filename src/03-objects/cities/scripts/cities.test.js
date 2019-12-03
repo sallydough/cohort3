@@ -1,121 +1,125 @@
-import { functions, City, Community } from "./cities.js"
+import { City, Community } from './cities.js';
 
-test("console C&C", () => {
-    console.log("hello community and cities from test.js");
-    functions.helloCities();
+test('test show City', () => {
+    const test_city = new City(1, "Test City", 60.01, -115.01, 1000000);
+    expect(test_city.show(test_city)).
+        toBe("- Test City is located at 60.01 latitude, -115.01 longitude and has a population of 1000000 people.");
 });
 
-/////////////////////CLASS CITY TESTING (130D)//////////////////////////
-let key = 1;
-
-// showInfo:
-test('check show', () => {
-
-    let testCity = new City(key, 'Calgary', 51.0447, -114.0719, 1267344);
-    const showStringInfo = testCity.showInfo();
-    expect(showStringInfo).toBe(`Key:1 || Name:Calgary || Latitude:51.0447 || Longitude:-114.0719 || Population:1267344`);
-});
-// movedIn and MovedOut
-test('check movedIn and movedOut', () => {
-    let testCity = new City(key, 'Calgary', 51.0447, -114.0719, 1267344);
-    expect(testCity.population).toBe(1267344);
-    testCity.movedIn(1000000);
-    expect(testCity.population).toBe(2267344);
-    testCity.movedOut(1000000);
-    expect(testCity.population).toBe(1267344);
-});
-// howBig
-test('check how big a city is', () => {
-    let newCity = new City(key, 'Red Deer', 52.2690, -113.8116, 100418);
-    let largeTown = new City(key++, 'Medicine Hat', 50.0421, -110.7197, 63260);
-    let town = new City(key++, 'Strathmore', 51.0378, -113.4004, 13528);
-    let village = new City(key++, 'Flagstaff County', 52.6531, -111.8823, 639);
-    let hamlet = new City(key++, 'Tilt Cove', 49.88499646, -55.622830842, 6);
-
-    expect(newCity.howBig()).toBe('City');
-    expect(largeTown.howBig()).toBe('Large Town');
-    expect(town.howBig()).toBe('Town');
-    expect(village.howBig()).toBe('Village');
-    expect(hamlet.howBig()).toBe('Hamlet');
+test('test movedIn and movedOut', () => {
+    const test_city = new City(1, "Test City", 60.01, -115.01, 1000000);
+    expect(test_city.movedIn(1)).toEqual(1000001);
+    expect(test_city.movedOut(1)).toEqual(1000000);
+    expect(test_city.movedIn(100)).toEqual(1000100);
+    expect(test_city.movedIn(25704)).toEqual(1025804);
+    expect(test_city.movedOut(100)).toEqual(1025704);
+    expect(test_city.movedOut(25704)).toEqual(1000000);
 });
 
-// whichSphere:
-test('check whichSphere', () => {
-    let northCity = new City(key++, 'Calgary', 51.0447, -114.0719, 1267344);
-    northCity.whichSphere();
-    expect(northCity.hemisphere).toBe('Northern Hemisphere');
-
-    let southCity = new City(key++, 'Sydney', -33.870453, 151.208755, 4741874);
-    southCity.whichSphere();
-    expect(southCity.hemisphere).toBe('Southern Hemisphere');
+test('test howBig', () => {
+    const test_city = new City(1, "Test City", 60.01, -115.01, 1000000);
+    expect(test_city.howBig(test_city)).toBe("- Test City is a City with a population > 100,000 people.");
+    test_city.population = 50000;
+    expect(test_city.howBig(test_city)).toBe("- Test City is a Large Town with a population of 20,000 to 100,000 people.");
+    test_city.population = 15000;
+    expect(test_city.howBig(test_city)).toBe("- Test City is a Town with a population of 1,000 to 20,000 people.");
+    test_city.population = 101;
+    expect(test_city.howBig(test_city)).toBe("- Test City is a Village, larger than a Hamlet but smaller than a Town.");
+    test_city.population = 1;
+    expect(test_city.howBig(test_city)).toBe("- Test City is a Hamlet with population of 1 to 100 people.");
 });
 
-
-//////////////////CLASS COMMUNITY TESTING 130D ///////////////////////////////
-test('check getPopulation, ', () => {
-    let cityController = new Community();
-
-    //'createCity test'
-    cityController.createCity(key++, 'Medicine Hat', 50.0421, -110.7197, 63260);
-    cityController.createCity(key++, 'Yellowknife', 62.453972, -114.371788, 19569);
-    cityController.createCity(key++, 'Red Deer', 52.2690, -113.8116, 100418);
-    let sydneyObj = cityController.createCity(key++, 'Sydney', -33.870453, 151.208755, 4741874);
-
-    // CHECK 'GET TOTAL POPULATION'
-    expect(cityController.getAllPopulation()).toBe(4925121);
-
-    //CHECK 'DELETECITY'
-    let mapCities = cityController.cities.map(city => { return city.name; });
-    expect(mapCities).toEqual(['Medicine Hat', 'Yellowknife', 'Red Deer', 'Sydney']);
-    cityController.deleteCity('Red Deer');
-    mapCities = cityController.cities.map(city => { return city.name; });
-    expect(mapCities).toEqual(['Medicine Hat', 'Yellowknife', 'Sydney']);
-
-    // CHECK 'NORTHERN AND SOUTHERN CITIES'
-    expect(cityController.getMostNorthern().name).toBe('Yellowknife');
-    expect(cityController.getMostSouthern().name).toBe('Sydney');
-
+test('test whichSphere', () => {
+    const test_city = new City(1, "Test City", 60.01, -115.01, 1000000);
+    const test_community = new Community("Test Community");
+    test_city.latitude = 60.01;
+    expect(test_community.whichSphere(test_city)).toBe("- Test City is located in the Northern Hemisphere.");
+    test_city.latitude = -27.89;
+    expect(test_community.whichSphere(test_city)).toBe("- Test City is located in the Southern Hemisphere.");
+    test_city.latitude = 0.00;
+    expect(test_community.whichSphere(test_city)).toBe("- Test City is located right on the Equator!");
 });
 
-//     // CHECK POPULATION CONTROL, MOVE IN AND OUT
-//     expect(sydneyObj.population).toBe(4741874);
-//     cityController.populationControl(sydneyObj, "moveOut", 1000000);
-//     expect(sydneyObj.population).toBe(3741874);
-//     cityController.populationControl(sydneyObj, "moveIn", 1000000);
-//     expect(sydneyObj.population).toBe(4741874);
-// });
-// test('check card are loaded given an array', () => {
-//     let cityController = new Community();
-//     let serverData = [
-//         {key: 1, name: 'Medicine Hat', latitude: 50.0421, longitude: -110.7197, population: 63260},
-//         {key: 2, name: 'Yellowknife', latitude: 62.453972, longitude: -114.371788, population: 19569},
-//         {key: 5, name: 'Red Deer', latitude: 52.269, longitude: -113.8116, population: 100418}];
-//     let mapCities = cityController.cities.map(city => {return city.name;});
-//     expect(mapCities).toEqual([]);
+test('test mostNorthern and mostSouthern', () => {
+    const test_community = new Community("Test Community");
+    test_community.createCity("city 1", 60.01, -115.01, 1000000);
+    test_community.createCity("city 2", 10.17, -40.21, 50000);
+    expect(test_community.getMostNorthern(test_community.cities)).toBe("city 1");
+    expect(test_community.getMostSouthern(test_community.cities)).toBe("city 2");
+    test_community.createCity("city 3", -48.17, 48.17, 77812);
+    test_community.createCity("city 4", 88.91, 114.56, 1);
+    expect(test_community.getMostNorthern(test_community.cities)).toBe("city 4");
+    expect(test_community.getMostSouthern(test_community.cities)).toBe("city 3");
+});
 
-//     cityController.loadCitiesServer(serverData);
-//     mapCities = cityController.cities.map(city => {return city.name;});
-//     expect(mapCities).toEqual(["Medicine Hat", "Yellowknife", "Red Deer",]);
-// });
+test('test getPopulation total for all cities', () => {
+    const test_community = new Community("Test Community");
+    test_community.createCity("city 1", 60.01, -115.01, 1000000);
+    test_community.createCity("city 2", 10.17, -40.21, 50000);
+    test_community.createCity("city 3", -48.17, 48.17, 77812);
+    test_community.createCity("city 4", 88.91, 114.56, 1);
+    expect(test_community.getPopulation(test_community.cities)).toBe(1127813);
+});
 
+test('test deleteCity', () => {
+    const test_community = new Community("Test Community");
+    test_community.createCity("new city 1", 60.01, -115.01, 1000000);
+    test_community.createCity("new city 2", 10.17, -40.21, 50000);
+    test_community.createCity("new city 3", -48.17, 48.17, 77812);
+    test_community.createCity("new city 4", 88.91, 114.56, 1);
+    expect(test_community.cities).toEqual(
+        [
+            { "key": 1, "latitude": 60.01, "longitude": -115.01, "name": "new city 1", "population": 1000000 },
+            { "key": 2, "latitude": 10.17, "longitude": -40.21, "name": "new city 2", "population": 50000 },
+            { "key": 3, "latitude": -48.17, "longitude": 48.17, "name": "new city 3", "population": 77812 },
+            { "key": 4, "latitude": 88.91, "longitude": 114.56, "name": "new city 4", "population": 1 }
+        ]
+    );
+    expect(test_community.deleteCity(test_community.cities, 3))
+        .toEqual(
+            [
+                { "key": 1, "latitude": 60.01, "longitude": -115.01, "name": "new city 1", "population": 1000000 },
+                { "key": 2, "latitude": 10.17, "longitude": -40.21, "name": "new city 2", "population": 50000 },
+                { "key": 4, "latitude": 88.91, "longitude": 114.56, "name": "new city 4", "population": 1 }
+            ]
+        );
+});
 
-// // // 130E PRACITCING REFERENCE
+test('test create City', () => {
+    const test_community = new Community("Test Community");
+    expect(test_community).toEqual({ "cities": [], "community_name": "Test Community", "counter": 0 });
+    test_community.createCity("Test City", 60.01, -115.01, 1000000);
+    expect(test_community.cities).
+        toEqual(
+            [
+                { "key": 1, "latitude": 60.01, "longitude": -115.01, "name": "Test City", "population": 1000000 }
+            ]
+        );
+});
 
-// test('check referece', () => {
-//     let myCity = new City (key++, 'Calgary', 51.0447, -114.0719, 1267344);
-//     let myFav = myCity;
- 
-//     expect(myCity.population).toBe(1267344);
-//     expect(myFav.population).toBe(1267344);
+test('test findAccount key to array index', () => {
+    const test_community = new Community("Test Community");
+    test_community.createCity("new city 1", 60.01, -115.01, 1000000);
+    test_community.createCity("new city 2", 10.17, -40.21, 50000);
+    test_community.createCity("new city 3", -48.17, 48.17, 77812);
+    test_community.createCity("new city 4", 88.91, 114.56, 1);
+    expect(test_community.findCity(test_community.cities, 2)).toBe(1);
+});
 
-//     expect(myCity.population).toBe(1267344);
-//     myCity.movedIn(1000000);
-//     expect(myCity.population).toBe(2267344);
-//     expect(myFav.population).toBe(2267344);
+// --- Comp 130E Test ---
 
-//     expect(myFav.population).toBe(2267344);
-//     myFav.movedIn(1000000);
-//     expect(myFav.population).toBe(3267344);
-//     expect(myCity.population).toBe(3267344);
+test('test createCity for Comp 130E', () => {
+    const test_community = new Community("Test Community");
+    const myCity = test_community.createCity("Test City", 60.01, -115.01, 1000000);
+    const myFav = myCity;
+    expect(myCity.population).toBe(1000000);
+    expect(myFav.population).toBe(1000000);
+    myFav.population = 2000000;
+    expect(myCity.population).toBe(2000000);
+    expect(myFav.population).toBe(2000000);
 
-//  });
+    // As a result of myFav's population being changed, myCity's population changed. 
+    // This is because myFav is not its own variable but a reference to the data in the myCity variable (which is a reference itself).
+
+    
+});
