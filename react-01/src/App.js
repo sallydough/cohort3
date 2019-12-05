@@ -2,7 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//import MyComponent file to this App file:
+import MyComponent from './components/MyComponent.js';
 
+// src/components/MyComponent
 
 
 
@@ -10,11 +13,17 @@ class App extends React.Component {
   constructor(props) {
     super();
     this.counter = 21;
+    this.state = {
+      myState: "TBD"
+    };
   }
 
   onPushMe = () => {
     console.log("You pushed me");
     console.log(this.counter++);
+    this.setState({
+      myState: "now:" + this.counter
+    });
   }
     // function App() {
     render() {
@@ -22,10 +31,12 @@ class App extends React.Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1>I am in control of this application and my name is Sally {this.counter++} </h1>
+            <h1>I am in control of this application and my name is Sally {this.state.myState} </h1>
             <button onClick={this.onPushMe}>
             Push Me
           </button>
+          <MyComponent 
+          />
             <p>
               Edit <code>src/App.js</code> and save to reload.
         </p>
