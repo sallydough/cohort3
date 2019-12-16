@@ -35,7 +35,7 @@ class App extends React.Component {
             <button onClick={this.onPushMe}>
             Push Me
           </button>
-          <MyComponent 
+          <MyComponent WhatToSay={"Whatever"}
           />
             <p>
               Edit <code>src/App.js</code> and save to reload.
