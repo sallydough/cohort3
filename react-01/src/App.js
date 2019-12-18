@@ -32,10 +32,10 @@ class App extends React.Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h1>I am in control of this application and my name is Sally {this.state.myState} </h1>
-            <button onClick={this.onPushMe}>
+            {/* <button onClick={this.onPushMe}> 
             Push Me
-          </button>
-          <MyComponent WhatToSay={"Whatever"}
+          </button> */}
+          <MyComponent WhatToSay={"Whatever"} pushChange={this.onPushMe}
           />
             <p>
               Edit <code>src/App.js</code> and save to reload.
