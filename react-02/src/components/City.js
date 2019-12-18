@@ -6,7 +6,7 @@ class City extends React.Component {
 
 	render() {
 			return (
-				<div>
+				<div className="App-Icons">
 					<img src={city} className="App-city" alt="city" />
 				</div>
 			)

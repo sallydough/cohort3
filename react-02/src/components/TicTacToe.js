@@ -6,7 +6,7 @@ class TicTacToe extends React.Component {
 
 	render() {
 			return (
-				<div>
+				<div className="App-Icons">
 					<img src={tictactoe} className="App-tictactoe" alt="tictactoe" />
 				</div>
 			)

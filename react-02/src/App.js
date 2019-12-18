@@ -13,11 +13,11 @@ import TicTacToe from "./components/TicTacToe.js";
 function App() {
   return (
     <div className="App">
-      <div className="App-icons">
+      <div className="App-nav">
         <HomeIcon />
         <TicTacToe />
-        <City />
         <Accounts />
+        <City />
       </div>
       <header className="App-header">
         
