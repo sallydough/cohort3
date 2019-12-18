@@ -2,10 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-//import MyComponent file to this App file:
+//import MyComponent/OddComponent/EvenComp file to this App file:
 import MyComponent from './components/MyComponent.js';
+import EvenComponent from './components/EvenComponent.js';
+import OddComponent from './components/OddComponent.js';
 
-// src/components/MyComponent
 
 
 
@@ -37,6 +38,8 @@ class App extends React.Component {
           </button> */}
           <MyComponent WhatToSay={"Whatever"} pushChange={this.onPushMe}
           />
+          <EvenComponent counter={this.counter}/>
+          <OddComponent counter={this.counter}/>
             <p>
               Edit <code>src/App.js</code> and save to reload.
         </p>
