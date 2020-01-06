@@ -1,0 +1,169 @@
+/* --- From cohort3/src/03-objects/cities-index.css --- */
+
+.city-wrapper {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-areas:  
+      'left top top top right' 
+      'left bottom bottom bottom right';
+      background-color: #282c34;
+      min-height: 90vmin;
+      padding: 5px;
+      color: white;
+}
+
+.city-container-left,
+.city-container-middle-top,
+.city-container-middle-bottom,
+.city-container-right {
+    margin: 15px;
+    padding: 10px;
+    border: solid 1px #09d3ac;
+    background-color:  rgba(0, 217, 255, 0.25);
+}
+
+.city-display-header {
+    font-size: 20px;
+}
+
+.create-city-display,
+.city-display,
+.city-facts-display,
+.city-calculations-display {
+    background-color: #282c34;
+    border: solid 1px #09d3ac;
+    margin: 10px;
+    padding: 10px;
+}
+
+.city-container-left {
+    grid-area: left;
+    height: 37vh;
+}
+
+.create-city-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-city-input {
+    margin: 10px;
+    padding: 5px;
+    height: 2vh;
+    width: 10vw;
+}
+
+.create-city-button {
+    margin: 10px 5px 5px 5px;
+}
+
+.create-city-button:hover {
+    cursor: pointer;
+}
+
+.city-cards-display-headers {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    font-size: 18px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.city-container-middle-top {
+    grid-area: top;
+    height: 45vh;
+}
+
+.city-display {
+    height: 37vh;
+    overflow: auto;
+}
+
+.city-card {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    height: 3vh;
+    padding: 10px 0px 10px 0px;
+    margin: 5px 0px 5px 0px;
+    background-color:  rgba(0, 217, 255, 0.10);
+}
+
+.city-card:hover {
+    background-color: rgba(0, 217, 255, 0.15);
+    cursor: pointer;
+}
+
+.city-card-elements:hover {
+    cursor: pointer;
+}
+
+.active-city-card,
+.active-city-card:hover {
+    background-color:rgb(0, 217, 255, 0.50);
+}
+
+.city-button,
+.city-population-input {
+    margin: 0px 5px 0px 5px;
+}
+
+.city-name,
+.city-population,
+.city-longitude,
+.city-latitude {
+    margin-top: 4px;
+}
+
+.city-population-input {
+    width: 6vw;
+}
+    
+.city-container-middle-bottom {
+    grid-area: bottom;
+    height: 22vh;
+    padding: 15px;
+    margin-top: -65px ;
+}
+
+.city-facts-display {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 22vh;
+    text-align: left;
+    font-size: 13px;
+    margin: -35px 0px 0px 0px;
+}
+
+.city-facts-text {
+    font-size: 17px
+}
+
+.city-container-right {
+    grid-area: right;
+    height: 70vh;
+}
+
+.city-calculations-display {
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    height: 16vh;
+    font-size: 30px;    
+    margin: 13px 13px 13px -30px;
+}
+
+.city-container-right-header {
+    font-size: 15px;
+}
+
+.city-button {
+    background-color: rgb(9, 211, 172, 0.4);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+  }

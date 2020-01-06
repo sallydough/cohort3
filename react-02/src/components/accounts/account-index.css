@@ -1,0 +1,128 @@
+
+/* --- From cohort3/src/03-objects/account-index.css --- */
+  
+.wrapper {
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-areas: 
+      'left middle middle right';
+    background-color: #282c34;
+    min-height: 90vmin;
+    padding: 5px;
+    color: white;
+}
+  
+.container-left,
+.container-middle,
+.container-right {
+    margin: 20px;
+    padding: 10px;
+    border: solid 1px #09d3ac;
+    background-color:  rgba(0, 217, 255, 0.25);
+}
+
+.display-header {
+    font-size: 20px;
+}
+
+.create-account-display,
+.account-display,
+.balances-display {
+    background-color: #282c34;
+    border: solid 1px #09d3ac;
+    margin: 10px;
+    padding: 10px;
+}
+  
+.container-left {
+    grid-area: left;
+    height: 27vh;
+}
+
+.create-account-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.create-account-name-input,
+.create-account-balance-input {
+    margin: 10px;
+    padding: 5px;
+    height: 2vh;
+    width: 10vw;
+}
+
+.create-account-button,
+.create-account-text {
+    margin: 10px 5px 5px 5px;
+}
+
+.create-account-button:hover,
+.account-button:hover {
+    cursor: pointer;
+}
+  
+.container-middle {
+    grid-area: middle;
+    height: 70vh;
+}
+
+.account-display {
+    height: 90%;
+    overflow: auto;
+}
+
+.account-card {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 5%;
+    padding: 10px;
+    margin: 5px 0px 5px 0px;
+    background-color:  rgba(0, 217, 255, 0.05);
+}
+
+.account-card:nth-child(odd) {background-color:  rgba(0, 217, 255, 0.20);}
+
+.account-name,
+.account-balance,
+.account-input,
+.account-button {
+    margin: 2px 20px 2px 20px;
+}
+
+.container-right {
+    grid-area: right;
+    height: 70vh;
+}
+
+.balances-display {
+    padding: 20px;
+    text-align: center;
+    height: 16vh;    
+    margin: 13px 13px 13px -30px;
+}
+
+.balances-display-balance,
+.balances-display-balance-total {
+    font-size: 25px;
+}
+
+.create-account-display-header,
+.account-display-header,
+.accounts-information-display-header {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.account-button {
+    background-color:rgb(9, 211, 172, 0.4);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+  }
