@@ -1,13 +1,15 @@
 import React from 'react';
+import MyAccounts from "/Users/sallydo/code/cohort3/react-02/src/components/accounts/MyAccounts.js"
 
-import account from "./svgAppImages/bank.svg"
+
 
 class Account extends React.Component {
 
 	render() {
 			return (
 				<div className="App-Icons">
-					<img src={account} className="App-account" alt="account" />
+		
+					<MyAccounts />
 				</div>
 			)
 		}

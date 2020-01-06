@@ -4,6 +4,8 @@ import './App.css';
 
 import tictactoe from "./components/svgAppImages/tic.svg"
 import home from "./components/svgAppImages/home.svg"
+import account from "./components/svgAppImages/bank.svg"
+import city from "./components/svgAppImages/city.svg"
 
 //import icon files:
 import Accounts from "./components/Accounts.js";
@@ -34,8 +36,9 @@ render() {
       <div className="App-nav">
       <img src={home} onClick={(e) => {this.setState({selected : <HomeIcon />})}}      className="App-home" alt="home" />
         <img src={tictactoe} onClick={(e) => {this.setState({selected : <TicTacToe />})}} className="App-tictactoe" alt="tictactoe" />
-        <Accounts />
-        <City />
+        <img src={account} onClick={(e) => {this.setState({selected : <Accounts />})}} className="App-accounts" alt="accounts" />
+        <img src={city} onClick={(e) => {this.setState({selected : <City />})}} className="App-cities" alt="cities" />
+       
       </div>
 
       {this.state.selected}
