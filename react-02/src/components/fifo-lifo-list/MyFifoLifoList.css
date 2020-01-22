@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #282c34;
+    background-color: #354723;
     min-height: 90vmin;
     padding: 10px;
-    color: white;
+    color: rgb(179, 50, 50);
 }
 
 .fifolifo-display {
@@ -33,7 +33,7 @@
 .lifo-deleted-item {
     width: 25vw;
     text-align: left;
-    border: solid 1px #09d3ac;
+    border: solid 2px #d0d309;
     padding: 10px;
 }
 
@@ -74,14 +74,14 @@
 
 .fifolifo-next-item {
     align-self: center;
-    border: solid 1px #09d3ac;
+    border: solid 5px #d3091a;
     padding: 10px;
     margin: 10px;
     width: 14vw;
 }
 
 .fifolifo-button {
-    background-color: rgb(9, 211, 172);
+    background-color: rgb(211, 181, 9);
     border: none;
     color: white;
     padding: 8px 20px;

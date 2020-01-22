@@ -6,10 +6,10 @@
     grid-template-columns: 20% 30% 30% 20%;
     grid-template-areas: 
       'left middle middle right';
-    background-color: #282c34;
+    background-color: #738ab8;
     min-height: 90vmin;
     padding: 5px;
-    color: white;
+    color: rgb(194, 0, 0);
 }
   
 .container-left,
@@ -17,8 +17,8 @@
 .container-right {
     margin: 20px;
     padding: 10px;
-    border: solid 1px #09d3ac;
-    background-color:  rgba(0, 217, 255, 0.25);
+    border: solid 1px #fffb15;
+    background-color:  rgb(43, 0, 185);
 }
 
 .display-header {
@@ -28,8 +28,8 @@
 .create-account-display,
 .account-display,
 .balances-display {
-    background-color: #282c34;
-    border: solid 1px #09d3ac;
+    background-color: #e91515;
+    border: solid 1px #fffb15;
     margin: 10px;
     padding: 10px;
 }
@@ -80,10 +80,10 @@
     height: 5%;
     padding: 10px;
     margin: 5px 0px 5px 0px;
-    background-color:  rgba(0, 217, 255, 0.05);
+    background-color:  rgba(33, 149, 172, 0.993);
 }
 
-.account-card:nth-child(odd) {background-color:  rgba(0, 217, 255, 0.20);}
+.account-card:nth-child(odd) {background-color:  rgba(251, 255, 0, 0.678);}
 
 .account-name,
 .account-balance,
@@ -117,9 +117,9 @@
 }
 
 .account-button {
-    background-color:rgb(9, 211, 172, 0.4);
+    background-color:rgba(9, 12, 211, 0.781);
     border: none;
-    color: white;
+    color: rgb(255, 244, 148);
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;

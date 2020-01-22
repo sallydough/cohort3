@@ -42,9 +42,9 @@ const FifoLifoListDisplay = () => {
 
     return (
         <div className="fifolifo-wrapper" style={{ backgroundColor: theme.background, color: theme.color }}>
-            <span className="fifolifo-main-header">I've Been Everywhere, Man, I've Been Everywhere. I've Been To...</span>
+            <span className="fifolifo-main-header">I'M TAKIN' OVER THE WORLD, BABY!!</span>
             <div className="fifolifo-next-item">
-                Next Item To Put In Both Lists: <span className="fifolifo-important-text">{nextAdd}</span>
+                Next City Up For Doom: <span className="fifolifo-important-text">{nextAdd}</span>
             </div>
             <div className="fifolifo-navbar">
                 <input
@@ -64,7 +64,7 @@ const FifoLifoListDisplay = () => {
                 <div className="fifo-wrapper">
                     <span className="fifolifo-header">FIFO Queue - First In First Out</span>
                     <div className="fifo-deleted-item">
-                        Last Item Taken Out: <span className="fifolifo-important-text">{lastFifoRemoved}</span>
+                        Recent Dominated City: <span className="fifolifo-important-text">{lastFifoRemoved}</span>
                     </div>
                     < FifoQueueDisplay
                         fifoQueue={fifoQueue}
@@ -73,7 +73,7 @@ const FifoLifoListDisplay = () => {
                 <div className="lifo-wrapper">
                     <span className="fifolifo-header">LIFO Stack - Last In First Out</span>
                     <div className="lifo-deleted-item">
-                        Last Item Taken Out: <span className="fifolifo-important-text">{lastLifoRemoved}</span>
+                        Recent Dominated City: <span className="fifolifo-important-text">{lastLifoRemoved}</span>
                     </div>
                     < LifoStackDisplay
                         lifoStack={lifoStack}
