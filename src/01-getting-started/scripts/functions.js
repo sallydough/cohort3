@@ -20,12 +20,14 @@ let provinceIDCode = "";
 let provinceAnswer = "";
 
 const functions = {
+
     /////////////////////////size//////////////////////
     size: (num) => {
         if (num < 0) return "negative";
         if (num < 10) return "small";
         if (num < 20) return "medium";
-        return "large";
+        if (num < 100) return "large";
+        return "extra large";
     },
 
 
@@ -204,20 +206,5 @@ const functions = {
         }
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default functions;
