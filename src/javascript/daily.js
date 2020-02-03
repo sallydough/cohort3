@@ -16,10 +16,6 @@ const functions = {
     return firstTerm + lastTerm;
 
 
-
-
-
-
     },
 
     // 2019-11-06 : "More Array Exercises (Really)" 
