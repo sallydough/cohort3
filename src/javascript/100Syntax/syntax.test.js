@@ -23,9 +23,9 @@ test("test my stringTest", () => {
 
 //boolean
 test("test my booleanTest", () => {
-    expect(functions.booleanTest(3)).toBe(false);
-    expect(functions.booleanTest(11)).toBe(true); 
-    expect(functions.booleanTest(10)).toBe(true);    
+    expect(functions.booleanTest(3,2)).toBe(true);
+    expect(functions.booleanTest(11,20)).toBe(false); 
+    expect(functions.booleanTest(10,10)).toBe(true);    
 });
 
 //array
@@ -102,7 +102,16 @@ test( "updateValuesArrayTest", () => {
 
 //forTest
 test( "ForTest", () => {
-    expect(functions.forTest(2)).toBe(0);
+    expect(functions.forTest(1)).toEqual([0]);
+    expect(functions.forTest(-1)).toEqual([]);
+    expect(functions.forTest(7)).toEqual([0, 1, 2, 3, 4, 5, 6]);
+    expect(functions.forTest("pie")).toEqual("Enter a number, fool!");
+});
+
+//forInTest
+test( "ForInTest", () => {
+    expect(functions.forInTest({ name: "Bug", power: "kindness", favFood: "kind people"})).toBe(" Bugkindnesskind people");
+    expect(functions.forInTest(1)).toEqual("Please enter an object, dammit!");
 });
 
 
