@@ -114,6 +114,23 @@ test( "ForInTest", () => {
     expect(functions.forInTest(1)).toEqual("Please enter an object, dammit!");
 });
 
+//WhileTest
+test( "whileTest", () => {
+    expect(functions.whileTest({ name: "Bug", power: "kindness", favFood: "kind people"})).toBe(" Bugkindnesskind people");
+    expect(functions.whileTest(1)).toEqual("Please enter an object, dammit!");
+});
+
+//DoWhileTest
+test( "doWhileTest", () => {
+    expect(functions.doWhileTest({ name: "Bug", power: "kindness", favFood: "kind people"})).toBe(" Bugkindnesskind people");
+    expect(functions.doWhileTest(1)).toEqual("Please enter an object, dammit!");
+});
+
+//forEachTest
+test( "forEachTest", () => {
+    expect(functions.forEachTest({ name: "Bug", power: "kindness", favFood: "kind people"})).toBe(" Bugkindnesskind people");
+    expect(functions.forEachTest(1)).toEqual("Please enter an object, dammit!");
+});
 
 
 
