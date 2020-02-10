@@ -116,20 +116,27 @@ test( "ForInTest", () => {
 
 //WhileTest
 test( "whileTest", () => {
-    expect(functions.whileTest({ name: "Bug", power: "kindness", favFood: "kind people"})).toBe(" Bugkindnesskind people");
-    expect(functions.whileTest(1)).toEqual("Please enter an object, dammit!");
+    expect(functions.whileTest({ name: "Bug", power: "kindness", favFood: "kind people"})).toBe("Enter number greater than 0, please!");
+    expect(functions.whileTest(1)).toEqual("1");
+    expect(functions.whileTest(3)).toEqual("321");
+    expect(functions.whileTest(-1)).toEqual("Enter number greater than 0, please!");
 });
 
-//DoWhileTest
+// //DoWhileTest
 test( "doWhileTest", () => {
-    expect(functions.doWhileTest({ name: "Bug", power: "kindness", favFood: "kind people"})).toBe(" Bugkindnesskind people");
-    expect(functions.doWhileTest(1)).toEqual("Please enter an object, dammit!");
+    expect(functions.doWhileTest(5)).toBe(5);
+    expect(functions.doWhileTest(0)).toEqual(1);
+    expect(functions.doWhileTest(-1)).toBe("Enter a number greater than 0");
+    expect(functions.doWhileTest("sa")).toBe("Enter a number greater than 0");
 });
 
-//forEachTest
+// //forEachTest
 test( "forEachTest", () => {
-    expect(functions.forEachTest({ name: "Bug", power: "kindness", favFood: "kind people"})).toBe(" Bugkindnesskind people");
-    expect(functions.forEachTest(1)).toEqual("Please enter an object, dammit!");
+    expect(functions.forEachTest([65, 44, 12, 4])).toEqual(125);
+    expect(functions.forEachTest([2,4,6,8])).toBe(20);
+    //adds numbers in array together, skips over strings
+    expect(functions.forEachTest([2,4,"c",8])).toBe(14);
+    
 });
 
 

@@ -152,19 +152,43 @@ const functions = {
     // showing how a while loop works by returning a certain number generated from a while loop, depending on what number is entered as a parameter.
     // loops through a block of code while a specified condition is true
 
-    whileTest: () => {
-        return 0;
+    whileTest: (number) => {
+        let text = ""
+        if (typeof (number) == "number" && number >= 0) {
+            while (number > 0) {
+                text += `${number}`
+                number--;
+            } return text;
+        } return "Enter number greater than 0, please!"
     },
 
     //Dowhile
-    //also loops through a block of code while a specified condition is true
-    doWhileTest: () => {
-        return 0;
+    //executes 'do' block of code once despite if condition is true then also loops through 'while' block of code while a specified condition is true
+    doWhileTest: (number) => {
+        let array = [];
+        if (typeof (number) == "number" && number >= 0) {
+            do {
+                array.push(number)
+                number--;
+            } while (number > 0); return array.length;
+        } return "Enter a number greater than 0"
     },
 
+    //forEach
+    // method calls a function once for each element in an array, in order.
     //with array and function
-    forEachTest: () => {
-        return 0;
+
+    forEachTest: (array) => {
+
+        var sum = 0;
+        array.forEach(myFunction);
+        return sum;
+
+        function myFunction(item) {
+            if (typeof (item) === "number") {
+                sum += item;
+            } return "Please enter array with all numbers"
+        }
     },
 
     // Objects / Dictionaries
