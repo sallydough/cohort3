@@ -18,6 +18,7 @@ class Board extends React.Component {
   renderSquare(i) {
     return <Square 
     value={this.state.squares[i]}
+    //onClick is a prop function that Square can call
     onClick={() => this.handleClick(i)} />;
   }
 

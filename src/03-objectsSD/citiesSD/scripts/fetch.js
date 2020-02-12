@@ -7,13 +7,6 @@ const functions = {
 
     getAllFirstNames: (data) => {
     return data.map(o => o.name);
-
-
-
-
-
-
-
     }
 };
 

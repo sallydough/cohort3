@@ -6,11 +6,12 @@ const functions = {
 }
 
 class City {
-    constructor(name, latitude, longitude, population) {
+    constructor(key, name, latitude, longitude, population) {
+        this.key = Number(key);
         this.name = name;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.population = population;
+        this.latitude = Number(latitude);
+        this.longitude = Number(longitude);
+        this.population = Number(population);
     }
 
     show() {
@@ -51,12 +52,7 @@ class Community {
     constructor(communityName) {
         this.cities = [];
         this.communityName = communityName;
-
-// -city passed (name, pop, lat, long)
-// -array of all cities longitude, sort thru (most north/southern)
-// -array of cities populations, sum all (getpop)
-// -new City (pop,name, long.lat) (createcity)
-// -got thru arra of cities, splice city out of array(delete city)
+        this.counter = 0;
 
     }
 
@@ -76,32 +72,45 @@ class Community {
     }
 
     createCity(name, latitude, longitude, population) {
-        let newCity = new City(name, latitude, longitude, population);
+        this.counter++;
+        let newCity = new City(this.counter, name, latitude, longitude, population);
         this.cities.push(newCity);
         return newCity;
         //check if all 4 inouts are valid
     }
 
-    deleteCity(array, city) {
-
+    deleteCity(array, index) {
+        array.splice(index, 1);
+        return array;
     }
 
     getMostNorthern(array) {
         let latitudeArray = array.map(cities => cities.latitude);
         let mostNorthernLat = Math.max(...latitudeArray);
-        let mostNorthernName =  latitudeArray.indexOf(mostNorthernName).name;
-        return mostNorthernName;
+        let mostNorthernName =  latitudeArray.indexOf(mostNorthernLat);
+        return array[mostNorthernName].name;
     }
 
-    getMostSorthern(array) {
+    getMostSouthern(array) {
         let latitudeArray = array.map(cities => cities.latitude);
         let mostSouthernLat = Math.min(...latitudeArray);
-        let mostSouthernName =  latitudeArray.indexOf(mostSouthernName).name;
-        return mostSouthernName;
+        let mostSouthernName =  latitudeArray.indexOf(mostSouthernLat);
+        return array[mostSouthernName].name;
+        
     }
 
     getPopulation(array) {
+        const city_populations = array.map(array => array.population);
+        const total_populations = city_populations.reduce((sum, num) => sum + num);
+        return total_populations;
         //map city array for population , add together, return populaton
+    }
+
+    findCity(array, cityKey) {
+        let array_keys = array.map(city => city.key);
+        let found_key = array_keys.find((key) => key == cityKey)
+        let found_index = array_keys.indexOf(found_key);
+        return found_index;
     }
     
 }

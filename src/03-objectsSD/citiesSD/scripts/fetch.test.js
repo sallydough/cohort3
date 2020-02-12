@@ -1,4 +1,4 @@
-import functions from "./fetch.js"
+import functions from "./fetch.js/index.js.js"
 
 const data = [
     {"name":"Isabella","surname":"Levy","gender":"female","region":"New Zealand"},
