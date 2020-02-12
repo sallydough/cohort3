@@ -8,8 +8,6 @@ import EvenComponent from './components/EvenComponent.js';
 import OddComponent from './components/OddComponent.js';
 
 
-
-
 class App extends React.Component {
   constructor(props) {
     super();
@@ -23,7 +21,7 @@ class App extends React.Component {
     console.log("You pushed me");
     console.log(this.counter++);
     this.setState({
-      myState: "now:" + this.counter
+      myState: "now: " + this.counter
     });
   }
     // function App() {
