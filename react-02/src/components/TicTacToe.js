@@ -8,7 +8,6 @@ class TicTacToe extends React.Component {
 	render() {
 			return (
 				<div className="App-Icons">
-		
 					<Game />
 				</div>
 			)
