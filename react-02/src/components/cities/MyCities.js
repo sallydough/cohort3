@@ -50,13 +50,13 @@ class Cities extends React.Component {
             controller.counter = highestKey;
         } else controller.counter = 0;
     }
-
+    // name/number written inside of each input is set as the new value
     handleOnChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
         })
     }
-
+    // calls createCity function onto input info and creates a new-city object & pushes it into cities array
     handleSubmit = (event) => {
         if (this.state.cityName === "") {
             alert("Name required. Please re-enter.");
@@ -130,7 +130,7 @@ class Cities extends React.Component {
                 {(theme) => (
                     <div className="city-wrapper" style={{ backgroundColor: theme.background, color: theme.color }}>
                         <div className="city-container-left">
-                            <span className="city-display-header">Add City</span>
+                            <span className="city-display-header">Add Conquered City</span>
                             <CityCreateDisplay
                                 handleSubmit={this.handleSubmit}
                                 handleOnChange={this.handleOnChange}

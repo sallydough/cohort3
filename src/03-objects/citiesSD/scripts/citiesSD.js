@@ -15,7 +15,7 @@ class City {
     }
 
     show() {
-        return `${this.name}, ${this.latitude}, ${this.longitude}, ${this.population}`;
+        return ` ${this.name}, ${this.latitude}, ${this.longitude}, ${this.population}`;
     }
 
     movedIn(number) {

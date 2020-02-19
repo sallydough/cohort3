@@ -4,6 +4,7 @@ import { City } from "./cities.js"
 
 const syncFunctions = {
 
+    // waits to retrieve data from API, pulls API data, then from data.length, assigns new key to new city, then pushes into array
     async dataSync(array) {
         let data = await postData(url + 'all');
         for (let i = 0; i < data.length; i++) {
@@ -13,6 +14,7 @@ const syncFunctions = {
         return array;
     },
 
+    // waits for 
     async createCitySync(city) {
         let data = await postData(url + 'add', city);
         data = await postData(url + 'all');

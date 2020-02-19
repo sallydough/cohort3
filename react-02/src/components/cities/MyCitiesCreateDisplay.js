@@ -1,12 +1,24 @@
 import React from 'react';
 
+
+//Component: Creates New City: collects information from inputs
+//this.props.handleSubmit = carries out handleSubmit function which calls createCity function onto input info and creates a new city & pushes it into cities array
+//this.props.cityName
+//this.props.latitude
+//this.props.longitude
+//this.props.population
+//this.props.handleOnChange
+
+
+
+
 class CityCreateDisplay extends React.Component {
 
     render() {
         return (
             <div className="create-city-display">
                 <form onSubmit={this.props.handleSubmit}>
-                    <label>City Name:</label>
+                    <label>City Conquered:</label>
                     <input
                         type="text"
                         name="cityName"
