@@ -35,6 +35,9 @@ class Cities extends React.Component {
         };
     }
 
+    //state.dataload is false= instigates datsync function where we go to retrieve data from the API
+    //changes JSON data into objects and puts them into an array of cities
+    //set dataLoad: true = triggers counterSync and cityChecker function
     componentDidMount = async () => {
         if (this.state.dataLoad === false) {
             await syncFunctions.dataSync(this.citiesList.cities);
@@ -47,6 +50,7 @@ class Cities extends React.Component {
         else return;
     }
 
+    //maps through array of city objects, locates the highest key number, sets it as the controller counter
     counterSync = (controller) => {
         let arrayKeys = controller.cities.map(city => city.key);
         if (arrayKeys.length > 0) {
