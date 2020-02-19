@@ -12,12 +12,19 @@ class AccountCard extends React.Component {
         }
     }
 
+    //event listener of input field. whenever s/t is writtien in it, 
+    //it will locate the name of the input and set the state to the written value
     handleOnChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
+            //changingBalance: event.target.value (another way of seeing it)
         })
     }
 
+    //goes in account array and looks for specific account via index
+    //deposits amount into existing array
+    //resets input to empty
+    //prompts balanceChecker which gathers highest/lowest/total balance of array and updates infoDisplay
     handleDeposit(i) {
         if (this.state.changeBalance < 0.01) {
             alert("Please enter a number greater than zero!");
@@ -31,6 +38,10 @@ class AccountCard extends React.Component {
         this.props.balanceChecker(this.props.listArray);
     }
 
+    //goes in account array and looks for specific account via index
+    //withdraws amount into existing array
+    //resets input to empty
+    //prompts balanceChecker which gathers highest/lowest/total balance of array and updates infoDisplay
     handleWithdraw(i) {
         if (this.state.changeBalance < 0.01) {
             alert("Please enter a number greater than zero!");
@@ -44,6 +55,7 @@ class AccountCard extends React.Component {
         this.props.balanceChecker(this.props.listArray);
     }
 
+    //returns card with name & account balance, input field, 3 buttons (delete, withdraw, deposit)
     render() {
         return (
             <div className="account-card">

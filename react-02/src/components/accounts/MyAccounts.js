@@ -24,12 +24,18 @@ class Accounts extends React.Component {
         };
     }
 
+    //event listener of input field. whenever s/t is written in it, 
+    //it will locate the name of the input and set the state to the written value
     handleOnChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
         })
     }
 
+    //maps through account array to see if new account name doesn't already exist.  
+    //if it does not, it creates a new account
+    //resets input fields to blank
+    //instigates balanceChecker & updates highest/lowest/total
     handleSubmit = (event) => {
         let array = this.accounts.listArray;
         let accountNames = array.map(array => array.accountName);
@@ -53,6 +59,7 @@ class Accounts extends React.Component {
         this.balanceChecker(this.accounts.listArray);
     }
 
+    //inplements functons to figure out highest/lowest/total balance
     balanceChecker = (array) => {
         if (this.accounts.listArray.length > 0) {
             this.setState({

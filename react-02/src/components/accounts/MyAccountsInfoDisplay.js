@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+
+//Component: returns Highest Balance, Lowest Balance, Total Account Balances
 class AccountBalancesDisplay extends React.Component {
 
     render() {

@@ -1,6 +1,11 @@
   
 import React from 'react';
 
+
+//Component: Create Account:
+//two inputs: Name and balance amount
+//uses handleSubmit function: maps through account array to see if new account name doesn't already exist.  if it does not, it creates a new account
+//uses handleOnChange function: sets the targetted name's value as whatever has been put in the input field
 class AccountCreateDisplay extends React.Component {
 
     render() {

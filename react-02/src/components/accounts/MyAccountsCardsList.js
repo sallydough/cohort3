@@ -1,6 +1,9 @@
 import React from 'react';
 import AccountCard from './MyAccountsCard.js'
 
+
+//Component: Account Cards List:
+//loops through array of account objects and creates a physcial card for them to be pushed into the Accounts List
 class AccountCardsList extends React.Component {
 
     render() {
