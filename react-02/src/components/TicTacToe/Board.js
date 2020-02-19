@@ -81,4 +81,6 @@ class Board extends React.Component {
   }
 }
 
+//changing ticTacTie 
+
 export default Board;
