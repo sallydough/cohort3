@@ -1,8 +1,12 @@
 import React from 'react';
 import CityCard from "./MyCitiesCard.js";
 
-class CityCardsList extends React.Component {
 
+
+//recieves array of objects of cities
+//maps through it and returns individual CityCards
+//by passing it the appropriate props seen below
+class CityCardsList extends React.Component {
     render() {
         const cityList = this.props.cities.map((city, i) => {
             return <CityCard

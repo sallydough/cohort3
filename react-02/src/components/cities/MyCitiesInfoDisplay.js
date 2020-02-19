@@ -4,6 +4,7 @@ import React from 'react';
 //Uses state.totalPopulation from MyCities.js >>> props.totalPopulation
 //Uses state.mostNorthern from MyCities.js
 //Uses state.mostSouthern from MyCities.js
+
 class CityInfoDisplay extends React.Component {
 
     render() {

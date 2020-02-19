@@ -8,6 +8,10 @@ import { Community } from './cities.js';
 import syncFunctions from './cities-api-functions.js';
 import './cities-index.css';
 
+
+//MOTHERBOARD OF COMMUNITIES WEBSITE
+
+
 class Cities extends React.Component {
 
     constructor(props) {
@@ -50,12 +54,14 @@ class Cities extends React.Component {
             controller.counter = highestKey;
         } else controller.counter = 0;
     }
+
     // name/number written inside of each input is set as the new value
     handleOnChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
         })
     }
+
     // calls createCity function onto input info and creates a new-city object & pushes it into cities array
     handleSubmit = (event) => {
         if (this.state.cityName === "") {
@@ -74,16 +80,20 @@ class Cities extends React.Component {
             const newCity = this.citiesList.createCity(this.state.cityName, this.state.latitude, this.state.longitude, this.state.population);
             syncFunctions.createCitySync(newCity);
         }
+        //resets input values' state to empty
         this.setState({
             cityName: "",
             latitude: "",
             longitude: "",
             population: "",
         })
+        //loops through new array and updates most north/south & total population using cityChecker function
         this.cityChecker(this.citiesList.cities);
         event.preventDefault();
     }
 
+    //used in MyCitiesCards.js
+    //targets specific city to delete using index, deletes it using deleteCity function, runs cityChecker to generate and update info, resets state to empty
     handleDelete = (i) => {
         syncFunctions.deleteCitySync(this.citiesList.cities[i]);
         this.citiesList.deleteCity(this.citiesList.cities, i);
@@ -96,6 +106,7 @@ class Cities extends React.Component {
         })
     }
 
+    //loops through array, targets most north, most south, total population and sets as state 
     cityChecker = (array) => {
         if (array.length > 0) {
             this.setState({
@@ -113,6 +124,9 @@ class Cities extends React.Component {
         }
     }
 
+    //click anywhere on a city card, recieve city statistics on bottom of page:
+    //event.target card, shows info statistics' state by looping through 4 functions
+    //select city index, show(), howbig() , whichSphere()
     cityInfoSelector = (event, i) => {
         if (event.target.value !== "Delete City") {
             this.setState({
@@ -124,6 +138,8 @@ class Cities extends React.Component {
         }
     }
 
+    //RETURNS WHOLE PAGE WITH 4 COMPONENTS WITH NECESSARY PROPS TO BE PASSED INTO IT
+    //CREATE CITY || CARD LIST || FACTS DISPLAY || INFO DISPLAY
     render() {
         return (
             <ThemeContext.Consumer>

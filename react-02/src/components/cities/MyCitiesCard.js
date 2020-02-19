@@ -13,12 +13,17 @@ class CityCard extends React.Component {
         }
     }
 
+    //
     handleOnChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
         })
     }
-
+    //goes into cities array, locates specific city using index, 
+    //carries out movedIn function with input value of 'this.state.changePopulation'
+    //updates population value using populationSync function
+    //resets to empty input field
+    //loops through cityChecker for new Info to display (north/southern/total pop)
     handleMovedIn(i) {
         if (this.state.changePopulation < 0) {
             alert("Please enter a number greater than zero.");
@@ -33,6 +38,11 @@ class CityCard extends React.Component {
         this.props.cityChecker(this.props.cities);
     }
 
+    //goes into cities array, locates specific city using index, 
+    //carries out movedOut function with input value of 'this.state.changePopulation'
+    //updates population value using populationSync function
+    //resets to empty input field
+    //loops through cityChecker for new Info to display (north/southern/total pop)
     handleMovedOut(i) {
         if (this.state.changePopulation < 0 || this.state.changePopulation >= this.props.population) {
             alert("Please enter a number greater than zero or less than current population.");
@@ -47,6 +57,11 @@ class CityCard extends React.Component {
         this.props.cityChecker(this.props.cities);
     }
 
+    //returns city card with name, longitude, latitude, population, an input field, and 3 buttons
+    //input field: number entered into input field will change the current state from  "" to the entered number using handleOnChange function
+    //movedIn Button: on click = carry out handleMovedIn function
+    //movedOut Button: on click = carry out handleMovedOut function
+    //Delete Button: on click = carry out handleDelete function (in MyCities.js)
     render() {
         return (
             <div className={`city-card ` + (this.props.selectedCity === this.props.cities[this.props.index] ? "active-city-card" : null)} onClick={(event) => this.props.cityInfoSelector(event, this.props.index)}>
