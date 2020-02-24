@@ -23,6 +23,9 @@ export class LinkedList {
         this.current = null;
     }
 
+    //creates a new class of ListNodes
+    //If there is no current value
+    //pushes first and last item in array to the top of two lists 
     insertListNode(subject, amount) { 
         let newListNode = new ListNode(subject, amount);
         if (!this.current) {
