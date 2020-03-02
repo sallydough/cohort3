@@ -78,19 +78,19 @@ class Community {
         return newCity;
         //check if all 4 inouts are valid
     }
-
+//removes city through index
     deleteCity(array, index) {
         array.splice(index, 1);
         return array;
     }
-
+//gets most Northern city
     getMostNorthern(array) {
         let latitudeArray = array.map(cities => cities.latitude);
         let mostNorthernLat = Math.max(...latitudeArray);
         let mostNorthernName =  latitudeArray.indexOf(mostNorthernLat);
         return array[mostNorthernName].name;
     }
-
+//gets most southern city
     getMostSouthern(array) {
         let latitudeArray = array.map(cities => cities.latitude);
         let mostSouthernLat = Math.min(...latitudeArray);
@@ -98,14 +98,14 @@ class Community {
         return array[mostSouthernName].name;
         
     }
-
+//gets total populaton
     getPopulation(array) {
         const city_populations = array.map(array => array.population);
         const total_populations = city_populations.reduce((sum, num) => sum + num);
         return total_populations;
         //map city array for population , add together, return populaton
     }
-
+//locates city in array through key
     findCity(array, cityKey) {
         let array_keys = array.map(city => city.key);
         let found_key = array_keys.find((key) => key == cityKey)
