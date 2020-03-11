@@ -89,22 +89,18 @@ _car_.replace("Buddy", "Nemesis")
 #split() = splits the string into substrings
 print(_phone_.split()) # returns ['Hello', ' World']
 
+#---------------------------------
+# BOOLEAN : evaluates whether expression is True or False
+print(20 > 8 ) # True
+print(45 == 0) # False
+print(67 < 1) # False
 
+#---------------------------------
+# ARRAYS: 
 
 #
 if 5 > 2:
     print("goodbye my love")
-#---------------------------------
-# BOOLEAN : 
-
-
-
-
-
-
-
-
-
 # define attributes / variables
 # number
 # string
