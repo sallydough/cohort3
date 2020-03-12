@@ -27,7 +27,7 @@ print("Hello" + x)
 # Boolean Type:	bool
 # Binary Types:	bytes, bytearray, memoryview
 
-# Set DataType: dataTypeWord(variable)
+# Set DataType: 'dataTypeWord'(value)
 _phone_ = str("Hello World")	
 number = int(20)
 search_item = dict(name="John", age=36)
@@ -98,9 +98,27 @@ print(67 < 1) # False
 #---------------------------------
 # ARRAYS: 
 
+# LIST is a collection which is ordered and changeable. Allows duplicate members.
+_list_ = ['bananas', 'apples', 'cheese']
+print(_list_[1]) # to access item, refer to index number (will give back 'apples')
+print(_list_[-1]) # negative indexing = will grab item from end of list ('cheese')
+print(_list_[0:2]) # range indexing = specify index range from start to end range (does not incluse end range indexwhen returning)
+
+# TUPLE is a collection which is ordered and unchangeable. Allows duplicate members.
+# written with round brackets
+# unchangable and immutable , cant change values
+_tuple_ = ( "Carbohydrates", "Protein", "Fats", "Micronutrients")
+print(_tuple_)
+
+# SET is a collection which is unordered and unindexed. No duplicate members.
+# DICTIONARY is a collection which is unordered, changeable and indexed. No duplicate members.
+
 #
 if 5 > 2:
     print("goodbye my love")
+
+
+
 # define attributes / variables
 # number
 # string
@@ -116,8 +134,26 @@ if 5 > 2:
 
 # arrays
 # add to the front
+# ===insert()	Adds an element at the specified position
 # add to the end
-# update values
+# ===append() add element to end of list
+# ====extend()	Add the elements of a list (or any iterable), to the end of the current list
+# remove:
+# ====pop() method to remove an element from the array.
+# ===remove() method to remove an element from the array
+# ===del() - deletes using index number item, or can delete whole list
+# ===clear() = emptys list
+# update values: change the value of a specific item, refer to the index number
+["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+# other methods for arrays:
+#reverse()	Reverses the order of the list
+# sort()	Sorts the list
+# index()	Returns the index of the first element with the specified value
+#clear()	Removes all the elements from the list
+# copy() / list()	Returns a copy of the list
+# count()	Returns the number of elements with the specified value
 
 # loops 
 # for
