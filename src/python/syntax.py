@@ -111,7 +111,20 @@ _tuple_ = ( "Carbohydrates", "Protein", "Fats", "Micronutrients")
 print(_tuple_)
 
 # SET is a collection which is unordered and unindexed. No duplicate members.
-# DICTIONARY is a collection which is unordered, changeable and indexed. No duplicate members.
+#  written with curly brackets
+# to access item: use 'for in' loop because set is unordered
+_set_ = {"sweet potatoes", "pickles", "overdue chicken"}
+print(_set_)
+
+# DICTIONARY/Object is a collection which is unordered, changeable and indexed. No duplicate members.
+# Python dictionaries are written with curly brackets, and they have keys and values 
+_dict_ = {
+  "name": "Ford",
+  "age": 123,
+  "eye colour": "ruby"
+}
+print(_dict_)
+
 
 #
 if 5 > 2:
